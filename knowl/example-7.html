@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-22T14:23:10-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="example example-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">The Fundamental Theorem of Möbius transformations.</span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Determine the Möbius transformation that sends the unique points \(z_1, z_2\text{,}\) and \(z_3\) to \(w_1, w_2\text{,}\) and \(w_3\text{,}\) respectively.</p>
+<div class="sagecell-sage" id="sage-20"><script type="text/x-sage">var('z,w')
+z1=0; z2=1; z3=I
+w1=0; w2=I; w3=-1
+T(z)=(z-z2)/(z-z3)*(z1-z3)/(z1-z2)
+S(w)=(w-w2)/(w-w3)*(w1-w3)/(w1-w2)
+solve(T(z)==S(w),w)
+</script></div>
+<p xmlns:svg="http://www.w3.org/2000/svg">The output gives the unique Möbius transformation that sends \(z_1 \mapsto w_1\text{,}\) \(z_2 \mapsto w_2\text{,}\) and \(z_3 \mapsto w_3\text{.}\)  In this example, the map fixes 0, sends 1 to \(i\) and \(i\) to \(-1\text{,}\) and it makes sense that the Sage cell produced rotation about the origin by \(90^\circ\text{:}\) \(z \mapsto iz\text{.}\)</p></article><span class="incontext"><a href="section-2.html#example-7">in-context</a></span>
+</body>
+</html>

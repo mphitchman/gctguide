@@ -1,0 +1,78 @@
+<worksheet><title>Constructing figures in <m>(\mathbb{D},{\cal H}</m></title>
+        <p>
+          At <url href="https://www.geogebra.org">geogebra.org</url> open the app <url href="https://www.geogebra.org/geometry">geometry</url>.
+        </p>
+      <exercise><title>The hyperbolic line through <m>p</m> and <m>q</m></title>
+        <statement>
+          <ol label="a.">
+            <li>
+              Plot two points in <m>\mathbb{D}</m>, and label them <m>P</m> and <m>Q</m>.
+            </li>
+            <li>
+              Use the <q>reflect about circle</q> tool to plot <m>P^\prime</m>, the point symmetric to <m>P</m> with respect to the unit circle.
+            </li>
+            <li>
+              Construct the circle through <m>P</m>, <m>Q</m>, and <m>P^\prime</m>, call this circle <m>c</m>.  The hyperbolic line through <m>P</m> and <m>Q</m> is the portion of this circle inside <m>\mathbb{D}</m>.
+            </li>
+            <li>
+              Plot the two ideal points of the hyperbolic line through <m>P</m> and <m>Q</m>, and label these points <m>U</m> and <m>V</m>. 
+            </li>
+            <li>
+              Construct the hyperbolic line through <m>P</m> and <m>Q</m>, and then hide all intermediate constructions, so that we just see <m>P</m>, <m>Q</m>, the hyperbolic line through them, and the ideal points <m>U</m> and <m>V</m>.  Drag <m>P</m> and <m>Q</m> around to make sure your construction works dynamically.           
+            </li>
+          </ol>
+        </statement>
+      </exercise>
+      <exercise><title>Constructing the hyperbolic circle centered at <m>P</m> through <m>Q</m>.</title>
+        <statement>
+          <ol label="a.">
+            <li>
+              Given the two points <m>P</m> and <m>Q</m> in <m>\mathbb{D}</m>, show again <m>P^\prime</m>, the point symmetric to <m>P</m> with respect to the unit circle.
+            </li>
+            <li>
+              Construct the type II cline of <m>P</m> and <m>P^\prime</m> that goes through <m>Q</m>. (See xxx for this construction).
+              This is the hyperbolic circle centered at <m>P</m> through <m>Q</m>.
+            </li>
+            <li>
+              Hide intermediate constructions, so that you just see on the canvas the three points <m>P</m>, <m>Q</m>, and <m>Z</m>, the type I cline of <m>P</m> and <m>Q</m> through <m>Z</m>, and the type II cline of <m>P</m> and <m>Q</m> through <m>Z</m>.
+            </li>
+          </ol>
+          <p>
+            One comments: The file you opened had this type II cline construction saved as a <q>custom tool</q>.  Instead of having to repeat this type II cline construction from scratch each time we want to build a hyperbolic circle, we can use the custom tool as in the following exercise.
+          </p>
+        </statement>
+      </exercise>
+      <exercise><title>Construct the perpendicular bisector to segment <m>PQ</m>.</title>
+      <statement>
+        <ol label="a.">
+            <li>
+              Use the custom tool to construct the hyperbolic circle centered at <m>P</m> through <m>Q</m>.
+            </li>
+            <li>
+              Use the custom tool to construct the hyperbolic circle centered at <m>Q</m> through <m>P</m>.
+            </li>
+            <li>
+              Plot the two points at which these circles intersect, and construct the hyperbolic line through these two points.
+            </li>
+          </ol>
+      </statement>
+    </exercise>
+    <exercise><title>There need not exist a hyperbolic circle through three points in <m>(\mathbb{D},{\cal H})</m>.</title>
+    <statement>
+      <ol label="a.">
+        <li>
+          Hide all constructions execpt <m>P</m>, <m>Q</m>, and the perpendicular bisector of <m>PQ</m>.  Then plot a new point, label it <m>T</m>.
+        </li>
+        <li>
+          Construct perpendicular bisectors <m>PT</m> and <m>QT</m>.
+        </li>
+        <li>
+          Find positions for <m>P</m>, <m>Q</m>, and <m>T</m> inside <m>\mathbb{D}</m> in which these three perpendicular bisectors do not intersect.
+        </li>
+        <li>
+          For points in such positions, convince yourself that no hyperbolic circle will go through these three points.
+        </li>
+      </ol>
+    </statement>
+  </exercise>    
+    </worksheet>

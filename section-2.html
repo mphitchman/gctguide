@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-10-22T14:23:09-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GCTA Sage for GCT</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="mph-GCT-guide" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\nin}{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="https://mphitchman.com/geometry" target="_blank"><img src="images/im-coverimage-icon.svg" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="gct-guide.html"><span class="title">GCT Activities</span></a></h1>
+<p class="byline">Michael P. Hitchman</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "geometry",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-sage.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sage.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-3.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-sage.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sage.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-3.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a></li>
+<li class="link">
+<a href="sage.html" data-scroll="sage"><span class="codenumber">1</span> <span class="title">Sage for GCT</span></a><ul>
+<li><a href="section-sage.html" data-scroll="section-sage">Using Sage</a></li>
+<li><a href="section-2.html" data-scroll="section-2" class="active">Sage for GCT</a></li>
+<li><a href="section-3.html" data-scroll="section-3">Blank Sage Cells</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="geogebra.html" data-scroll="geogebra"><span class="codenumber">2</span> <span class="title">Geogebra for GCT</span></a><ul>
+<li><a href="section-4.html" data-scroll="section-4">Getting to know Geogebra</a></li>
+<li><a href="section-5.html" data-scroll="section-5">Geogebra Activities</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-2"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Sage for GCT</span>
+</h2>
+<p id="p-13">In this section, Sage cells have been provided that help us do the following:</p>
+<ol class="decimal">
+<li id="li-9">Convert between polar and Cartesian form (Section 2.2)</li>
+<li id="li-10">The angle determined by three points (Section 2.3)</li>
+<li id="li-11">Analyze basic transformations of the plane (Section 3.1)</li>
+<li id="li-12">Analyze Mobs</li>
+<li id="li-13">
+</ol>
+<p id="p-14">You may alter them to your purposes as you work through the homewok.</p>
+<article class="example example-like" id="sage-cart-and-polar-form"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Cartesian and Polar Form of a complex expression.</span>
+</h6>
+<p id="p-15">We can encourage Sage to produce user-friendly output, such as in the following example, where we aim to produces the polar form of \(z = 1 + 3i\text{.}\)</p>
+<div class="sagecell-sage" id="sage-5"><script type="text/x-sage">z=1+3*I
+t=arg(z)
+r=abs(z)
+print ("theta =",t,"and r =",r)
+</script></div>
+<p id="p-16">If you would like to describe this angle in degrees as a decimal approximation, you can.</p>
+<div class="sagecell-sage" id="sage-6"><script type="text/x-sage">z=1+3*I
+t_approx=n(arg(z)*180/pi,digits=5)
+print ("theta is about",t_approx,"degrees")
+</script></div></article><article class="exercise exercise-like" id="check-C-basics"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+</h6>
+<ol class="decimal">
+<li id="li-14">
+<p id="p-17">Convert the following complex numbers to Polar form: \(z = 2 + 4i\text{,}\) \(w = 4-3i\text{,}\) and \(v = -1-2i\text{.}\)</p>
+<div class="sagecell-sage" id="sage-7"><script type="text/x-sage">
+</script></div>
+</li>
+<li id="li-15">
+<p id="p-18">Convert the following complex numbers to Cartesian form: \(z= 2e^{i\pi/4}\text{,}\) \(w = 5e^{i5\pi/6}\text{,}\) and \(v = 2e^{3}\text{.}\)</p>
+<div class="sagecell-sage" id="sage-8"><script type="text/x-sage">
+</script></div>
+</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><ol class="decimal">
+<li id="li-16">\(z= 2\sqrt{5}e^{i\arctan(2)}\text{,}\) \(w = 5e^{-i\arctan(3/4)} \text{,}\) and \(v = \sqrt{5}e^{i(-\pi+\arctan(2)}\text{.}\)</li>
+<li id="li-17">
+<p id="p-19">By default, Sage outputs a complex expression in Cartesian form, so we need only enter and evaluate the polar form expression to do this conversion.</p>
+<p id="p-20">\(z= \sqrt{2}(1+i)\text{,}\) \(w = -\frac{5}{2}(\sqrt{3}-i)\text{,}\) \(v = 2e^3\) (this is a real number!)</p>
+</li>
+</ol></div></div>
+</div></article><article class="example example-like" id="sage-angle-det-by-3pts"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">The angle determined by three points.</span>
+</h6>
+<p id="p-21">Recall from Section 2.3, if \(u,v,\) and \(w\) are three complex numbers, we let \(\angle uvw\) denote the angle \(\theta\) from ray \(\overrightarrow{vu}\) to \(\overrightarrow{vw}\text{.}\) In particular,</p>
+<div class="displaymath">
+\begin{equation*}
+\angle uvw = \theta = \arg\bigg(\frac{w-v}{u-v}\bigg)\text{.}
+\end{equation*}
+</div>
+<div class="sagecell-sage" id="sage-9"><script type="text/x-sage">u=2
+v=0
+w=2-I
+t_approx=n(arg((w-v)/(u-v))*180/pi,digits=5)
+print ("angle(uvw) is approximately ",t_approx,"degrees")
+</script></div></article><article class="example example-like" id="sage-GLT"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">General Linear Transformations of \(\mathbb{C}\).</span>
+</h6>
+<p id="p-22">We may define and compose compositions in order to describe a desired transformation of the plane.</p>
+<div class="sagecell-sage" id="sage-10"><script type="text/x-sage">
+</script></div></article><article class="example example-like" id="example-4"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Möbius transformations.</span>
+</h6>
+<p id="p-23">We can define the Möbius transformation</p>
+<div class="displaymath">
+\begin{equation*}
+T(z)=\frac{az+b}{cz+d}
+\end{equation*}
+</div>
+<p data-braille="continuation">by specifying values of the constants \(a,b,c\text{,}\) and \(d\text{:}\) <div class="sagecell-sage" id="sage-11"><script type="text/x-sage">z=var('z')
+a=2+I
+b=1
+c=1
+d=1-I
+T(z)=(a*z+b)/(c*z+d)
+print("T(z) =",T(z))
+</script></div></p>
+<p id="p-24">We can determine various features of our Möbius transformation, including:</p>
+<ol class="decimal">
+<li id="li-18">det\((T)\text{,}\)</li>
+<li id="li-19">the pole of \(T\text{,}\) \(z_\infty\text{,}\) provided \(c \neq 0\)</li>
+<li id="li-20">the inverse pole of \(T\text{,}\) \(w_\infty\text{,}\) provided \(c \neq 0\text{,}\) and</li>
+<li id="li-21">the fixed points of \(T\)</li>
+</ol>
+<p data-braille="continuation">. Note: If \(c = 0\text{,}\) the Möbius transformation \(T\) is a general linear transformation, and in this case \(T(\infty)=\infty\text{.}\) <div class="sagecell-sage" id="sage-12"><script type="text/x-sage">print("det(T) = ",a*d-b*c)
+zinf = -d/c
+winf = a/c
+print("The pole of T is ",zinf)
+print("The inverse pole of T is ",winf)
+print("The fixed points of T are: ")
+solve(T(z)-z,z)
+</script></div></p></article><article class="exercise exercise-like" id="check-cross-ratio"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+</h6>
+<ol class="decimal">
+<li id="li-22">Determine the cross ratio of the points \(3+i, 2+4i\text{,}\) \(3-i\text{,}\) and \(4\text{.}\) <div class="sagecell-sage" id="sage-13"><script type="text/x-sage">
+</script></div>
+</li>
+<li id="li-23">Define the Möbius transformation that sends \(z_1 = 3+i\) to 1, \(z_2 = i\) to 0, and \(z_3 = -3\) to \(\infty\text{.}\)  Where does this Möbius transformation send \(2i\text{?}\) <div class="sagecell-sage" id="sage-14"><script type="text/x-sage">
+</script></div>
+</li>
+</ol></article><article class="example example-like" id="sage-mob-normal-form-2"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Normal form of a of Möbius transformation, 2 fixed points.</span>
+</h6>
+<p id="p-25">We can determine the normal form of \(T\text{,}\) after we have determined its fixed point(s).  Here we tackle the case of 2 fixed points.</p>
+<p id="p-26">Consider the Möbius transformation</p>
+<div class="displaymath">
+\begin{equation*}
+T(z) = \frac{(6+3i)z+(2-3i)}{z+3}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">which has two fixed points: \(p=i\) and \(q = 3 + 2i\text{.}\)  In the cell below we let <code class="code-inline tex2jax_ignore">L</code> denote \(\lambda\) in the normal form</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{T(z)-p}{T(z)-q}=\lambda\frac{z-p}{z-q}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Our goal is to determine \(L\text{,}\) which we can do by asking Sage to solve the normal form equation for \(L\) after plugging in some value for \(z\text{.}\)  We choose \(z = 0\text{,}\) but any \(z \neq p,q\) would work. <div class="sagecell-sage" id="sage-15"><script type="text/x-sage">var('L')
+T(z)=((6+3*I)*z+(2-3*I))/(z+3)
+p=I
+q=3+2*I
+solve((T(0)-p)/(T(0)-q)==L*(0-p)/(0-q),L)
+</script></div></p></article><article class="example example-like" id="sage-mob-normal-form-1"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Normal form of a of Möbius transformation, 1 fixed point.</span>
+</h6>
+<p id="p-27">In this case the normal form is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{T(z) - p} = \frac{1}{z-p} + d\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">As an example, consider \(T(z) = (7z-12)/(3z-5)\text{,}\) which fixes one point, \(p=2\text{.}\)  To find the normal form we find the complex constant \(d\text{.}\) <div class="sagecell-sage" id="sage-16"><script type="text/x-sage">var('d')
+T(z)=(7*z-12)/(3*z-5)
+p=2
+solve(1/(T(0)-p)==1/(0-p)+d,d)
+</script></div></p></article><article class="exercise exercise-like" id="exercise-3"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span>
+</h6>
+<p id="p-28">Use Sage cells to find the Normal form of</p>
+<div class="displaymath">
+\begin{equation*}
+T(z)=\frac{iz+3i+2}{2iz-4-i}\text{.}
+\end{equation*}
+</div>
+<div class="sagecell-sage" id="sage-17"><script type="text/x-sage">
+</script></div>
+<div class="sagecell-sage" id="sage-18"><script type="text/x-sage">
+</script></div>
+<div class="sagecell-sage" id="sage-19"><script type="text/x-sage">
+</script></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">Here we go!</div></div>
+</div></article><article class="example example-like" id="example-7"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">The Fundamental Theorem of Möbius transformations.</span>
+</h6>
+<p id="p-29">Determine the Möbius transformation that sends the unique points \(z_1, z_2\text{,}\) and \(z_3\) to \(w_1, w_2\text{,}\) and \(w_3\text{,}\) respectively.</p>
+<div class="sagecell-sage" id="sage-20"><script type="text/x-sage">var('z,w')
+z1=0; z2=1; z3=I
+w1=0; w2=I; w3=-1
+T(z)=(z-z2)/(z-z3)*(z1-z3)/(z1-z2)
+S(w)=(w-w2)/(w-w3)*(w1-w3)/(w1-w2)
+solve(T(z)==S(w),w)
+</script></div>
+<p id="p-30">The output gives the unique Möbius transformation that sends \(z_1 \mapsto w_1\text{,}\) \(z_2 \mapsto w_2\text{,}\) and \(z_3 \mapsto w_3\text{.}\)  In this example, the map fixes 0, sends 1 to \(i\) and \(i\) to \(-1\text{,}\) and it makes sense that the Sage cell produced rotation about the origin by \(90^\circ\text{:}\) \(z \mapsto iz\text{.}\)</p></article><article class="example example-like" id="example-8"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Transformations of \((\mathbb{D},{\cal H})\).</span>
+</h6>
+<p id="p-31">A transformation in \(\cal H\) has the form</p>
+<div class="displaymath">
+\begin{equation*}
+T(z) = e^{i\theta}\frac{z - z_0}{1-\overline{z}_0z}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Sage can evaluate such functions for us.  Note that a map in \(\cal H\) is characterized by two constants, \(\theta\) and \(z_0\text{,}\) the point that gets sent to 0.  So we specify these values in the Sage cell.  In the example below, we consider</p>
+<div class="displaymath">
+\begin{equation*}
+T(z) = e^{i\pi/2}\frac{z-1/2}{1-\overline{1/2}z}
+\end{equation*}
+</div>
+<p data-braille="continuation">and find \(T(\frac{1}{2}i) = -\frac{2}{17}(3+5i)\text{.}\)</p>
+<div class="sagecell-sage" id="sage-21"><script type="text/x-sage">var('z')
+theta=pi/4
+z0=1/2
+T(z)=e^(I*theta)*(z-z0)/(1-conjugate(z0)*z)
+T(1/2*I)
+</script></div></article><article class="example example-like" id="example-9"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Distance between points in \((\mathbb{D},{\cal H})\).</span>
+</h6>
+<p id="p-32">The shortest path between points \(p\) and \(q\) in \((\mathbb{D},{\cal H})\) is along the hyperbolic segement joining them, and we derive this distance, \(d_H(p,q)\text{,}\) in Section 5.3 to be</p>
+<div class="displaymath">
+\begin{equation*}
+d_H(p,q) = \ln\left[\frac{|1-\overline{p}q|+|q-p|}{|1-\overline{p}q|-|q-p|}\right]\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Here are two Sage cells, the first defines the distance function, and the second evaluates distance between two specified points.</p>
+<div class="sagecell-sage" id="sage-22"><script type="text/x-sage">         var('z','w')
+d_H(z,w)=log((abs(1-conjugate(z)*w)+abs(w-z))/(abs(1-conjugate(z)*w)-abs(w-z)))
+</script></div>
+<div class="sagecell-sage" id="sage-23"><script type="text/x-sage">p=.2+.2*I
+q=.5
+d_H(p,q)
+</script></div></article><article class="example example-like" id="example-10"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Exercise 5.4.6.</span>
+</h6>
+<p id="p-33">If two sides of a hyperbolic triangle are Euclidean segments, then the included angle can be calculated using TODO.  For instance, the angle at 0 is \(45^\circ\text{.}\)</p>
+<p id="p-34">To find the angle at another corner, we first transform the triangle so that the corner is moved to the origin.  A Sage cell is handy here.  To move \(\frac{1}{2}\) to the origin, we use the following Sage cell to build such a map in \(\cal H\) and track the image of the other two points.</p>
+<div class="sagecell-sage" id="sage-24"><script type="text/x-sage">var('z')
+theta=0
+z0=1/2
+T(z)=e^(I*theta)*(z-z0)/(1-conjugate(z0)*z)
+print("T(0)=",T(0), "and T(1/2+1/2*I)=",T(1/2+1/2*I))
+</script></div></article></section></div></main>
+</div>
+<!--Start: StatCounter code--><script>
+var sc_project=11625953;
+var sc_invisible=1;
+var sc_security="f68ed8d5";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/11625953/0/f68ed8d5/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+</body>
+</html>

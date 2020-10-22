@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<chapter xml:id="sage">
+  <title>Sage for GCT</title>
+  <introduction>
+  	<p>
+      Many online tools will evaluate complex expressions for us.  Our tool of choice will be Sage.  In this section we provide several examples of Sage cells aimed at speeding up the calculations we do to understand the geometries we study in GCT.
+    </p>
+  </introduction>
+  <section xml:id="section-sage">
+    <title>Using Sage</title>
+    <p>
+      Sage cells allow us to evaluate expressions within the webpage we are reading, as long as we are online, and Sage cells can be found throughout this booklet.  You can return here as often as you like to access Sage cells in order to help with your geometry work.
+    </p>
+    <p>
+    	Sage uses the standard operators +, -, *, /, and ^ for addition, subtraction, multiplication, division, and exponentiation.  A common user error (of mine) is to omit the multiplication symbol.  To input the expression <m>3x+7</m> into Sage, type <q>3*x+7</q>.
+      For insance, we can ask Sage to evaluate <me>\frac{8+4\cdot5^2}{5}</me> by typing the following into the Sage cell below and hitting the Evaluate button (or typing shift-return).
+    </p>
+    <sage>
+        <input>(3+4*5^2)/2</input>
+        <output>108/5</output>
+    </sage>
+
+    <p>
+      We will be interested in computing with complex numbers.  In Sage, represent <m>i</m> with the capital letter <c>I</c>. Let's evaluate the following division in a sage cell: <me>\frac{3+2i}{4+i}</me>.
+    </p>
+      <sage>
+        <input>(3+2*I)/(4+I)</input>
+        <output>5/17*I+14/17</output>
+      </sage>
+      <p>
+        Notice Sage prefers to output its complex numbers in Cartesian form <m>bi + a</m>.
+      </p>
+      <p> Sage inputs for some important constants are:  
+          <ul>
+            <li> <c>I</c> for <m>i</m></li>
+            <li> <c>pi</c> for <m>\pi</m>, and </li>
+            <li> <c>e</c> for <m>e</m>.</li>
+          </ul>
+        </p>
+    <p>Sage uses the following commands to provide useful information about a complex number:
+      <ul>
+        <li><c>abs(z)</c> tells us the modulus of <m>z</m>, <m>|z|</m>.</li>
+        <li><c>arg(z)</c> tells us the argument of <m>z</m>, <m>\text{arg}(z)</m> (in radians, between <m>-\pi</m> and <m>\pi</m>).</li>
+        <li><c>real_part(z)</c> and <c>imag_part(z)</c> give the real and imaginary parts of <m>z</m>.</li>
+        <li><c>conjugate(z)</c> tells us the conjugate of <m>z</m>, <m>\overline{z}</m>.</li>
+        <li>For a numerical approximation to a number, such <m>\text{arg}(3+2i)</m>, type <c>n(arg(3+2*I,digits=4))</c>.</li>
+      </ul> 
+    </p>
+    <paragraphs><title>Displaying Sage Output</title>
+    <p>We can give names to quantities, and we can create new lines in a Sage cell by pressing <c>Return</c> (or <c>Enter</c>) and then typing additional commands.  Consider the following Sage cell, which defines two points <m>z</m> and <m>w</m>, their product, which we call <m>u</m>, and their quotient, which we call <m>v</m>.  What happens when you evaluate the cell?</p>
+    <sage>
+      <input>
+        z=3+I
+        w=2+3*I
+        u=z*w
+        v=z/w
+      </input>
+      <output></output>
+    </sage>
+    <p>Nothing!  Well, Sage evaluated <m>u</m> and <m>v</m>, but did not display the results.  If you're in a hurry and want to know the value of <m>u</m>, you can add a line at the bottom of the above cell that is simply <c>u</c>.  When you evaluate again, the output should read 11*I + 3.  This is <m>zw</m>.</p>
+    <p>Once <m>u</m> and <m>v</m> are defined (and evaluated in the cell above), subsequent cells on your page, such as the one below, will use those values until these variables are assigned differernt values.  We note that if you reload this webpage, work you've done in Sage cells will be lost.</p>
+    <p>One can use the <c>print()</c> command to create nice output:</p>
+    <sage>
+      <input>
+        print("If z =", z, "and w =", w, "then")
+        print ("z*w =", u, "and z/w =", v)
+      </input>
+      <output>
+        If z = 3+I and w = 2 + 3*I 
+        z*w =  11*I + 3 and z/w =  -7/13*I + 9/13
+      </output>
+    </sage>
+        </paragraphs>
+  </section>
+  <section><title>Sage for GCT</title>
+  <p>In this section, Sage cells have been provided that help us do the following:
+    <ol>
+      <li>Convert between polar and Cartesian form (Section 2.2)</li>
+      <li>The angle determined by three points (Section 2.3)</li>
+      <li>Analyze basic transformations of the plane (Section 3.1)</li>
+      <li>Analyze Mobs</li>
+      <li></li>
+    </ol>
+  </p>
+  <p>You may alter them to your purposes as you work through the homewok.</p>
+  <example xml:id="sage-cart-and-polar-form"><title>Cartesian and Polar Form of a complex expression</title>
+  <p>We can encourage Sage to produce user-friendly output, such as in the following example, where we aim to produces the polar form of <m>z = 1 + 3i</m>.</p>
+                <sage>
+                  <input>
+                    z=1+3*I
+                    t=arg(z)
+                    r=abs(z)
+                    print ("theta =",t,"and r =",r)
+                  </input>
+                  <output></output>
+                </sage>
+      <p>If you would like to describe this angle in degrees as a decimal approximation, you can.</p>
+              <sage>
+                <input>
+                  z=1+3*I
+                  t_approx=n(arg(z)*180/pi,digits=5)
+                  print ("theta is about",t_approx,"degrees")
+                </input>
+              </sage>
+            </example>
+      <exercise xml:id="check-C-basics">
+        <statement>
+          <ol>
+            <li>
+              <p>
+                Convert the following complex numbers to Polar form: <m>z = 2 + 4i</m>, <m>w = 4-3i</m>, and <m>v = -1-2i</m>.
+              </p>
+              <sage>
+                <input></input>
+                <output></output>
+              </sage>
+            </li>
+            <li>
+              <p>
+                Convert the following complex numbers to Cartesian form: <m>z= 2e^{i\pi/4}</m>, <m>w = 5e^{i5\pi/6}</m>, and <m>v = 2e^{3}</m>.  
+              </p>
+              <sage>
+                <input></input>
+                <output></output>
+              </sage>
+            </li>
+          </ol>
+        </statement>
+      <answer>
+          <ol>
+            <li> <m>z= 2\sqrt{5}e^{i\arctan(2)}</m>, <m>w = 5e^{-i\arctan(3/4)} </m>, and <m>v = \sqrt{5}e^{i(-\pi+\arctan(2)}</m>.</li>
+            <li> <p>By default, Sage outputs a complex expression in Cartesian form, so we need only enter and evaluate the polar form expression to do this conversion.</p>
+            <p> <m>z= \sqrt{2}(1+i)</m>, <m>w = -\frac{5}{2}(\sqrt{3}-i)</m>, <m>v = 2e^3</m> (this is a real number!)</p></li>
+            </ol>
+        </answer>
+      </exercise>
+      <example xml:id="sage-angle-det-by-3pts"><title>The angle determined by three points</title>
+      <p>Recall from Section 2.3, if <m>u,v,</m> and <m>w</m> are three complex numbers, we let <m>\angle uvw</m> denote the angle <m>\theta</m> from ray <m>\overrightarrow{vu}</m> to <m>\overrightarrow{vw}</m>. In particular,
+      <me> \angle uvw = \theta = \arg\bigg(\frac{w-v}{u-v}\bigg)</me>.</p>
+            <sage>
+          <input>
+            u=2
+            v=0
+            w=2-I
+            t_approx=n(arg((w-v)/(u-v))*180/pi,digits=5)
+            print ("angle(uvw) is approximately ",t_approx,"degrees")
+          </input>
+        </sage>
+      </example>
+
+      <example xml:id="sage-GLT"><title>General Linear Transformations of <m>\mathbb{C}</m></title>
+      <p>We may define and compose compositions in order to describe a desired transformation of the plane.</p>
+      <sage>
+        <input>
+        </input>
+      </sage>
+      </example>
+      <example><title>M&#xf6;bius transformations</title>
+      <p>We can define the M&#xf6;bius transformation
+        <me>T(z)=\frac{az+b}{cz+d}</me> 
+        by specifying values of the constants <m>a,b,c</m>, and <m>d</m>:
+      <sage>
+          <input>
+            z=var('z')
+            a=2+I
+            b=1
+            c=1
+            d=1-I
+            T(z)=(a*z+b)/(c*z+d)
+            print("T(z) =",T(z))
+          </input>
+          <output>T(z) = ((I + 2)*z + 1)/(z - I + 1)</output>
+        </sage>
+      </p>
+      <p>
+        We can determine various features of our M&#xf6;bius transformation, including:
+        <ol>
+          <li>det<m>(T)</m>, </li>
+          <li>the pole of <m>T</m>, <m>z_\infty</m>, provided <m>c \neq 0</m></li>
+          <li>the inverse pole of <m>T</m>, <m>w_\infty</m>, provided <m>c \neq 0</m>, and</li>
+          <li>the fixed points of <m>T</m></li>
+        </ol>.
+        Note: If <m>c = 0</m>, the M&#xf6;bius transformation <m>T</m> is a general linear transformation, and in this case <m>T(\infty)=\infty</m>.
+        <sage>
+          <input>
+            print("det(T) = ",a*d-b*c)
+            zinf = -d/c
+            winf = a/c
+            print("The pole of T is ",zinf)
+            print("The inverse pole of T is ",winf)
+            print("The fixed points of T are: ")
+            solve(T(z)-z,z)
+          </input>
+          <outpu>
+            det(T) =  -I + 2
+            The pole of T is  I - 1
+            The inverse pole of T is  I + 2
+            The fixed points of T are: 
+            [z == -1/2*sqrt(4*I + 1) + I + 1/2, z == 1/2*sqrt(4*I + 1) + I + 1/2]
+          </outpu>
+        </sage>
+      </p>
+    </example>
+    <exercise xml:id="check-cross-ratio">
+      <statement>
+        <ol>
+          <li>
+            Determine the cross ratio of the points <m>3+i, 2+4i</m>, <m>3-i</m>, and <m>4</m>.
+            <sage>
+              <input>
+              </input>
+            </sage>
+          </li>
+          <li>
+            Define the M&#xf6;bius transformation that sends <m>z_1 = 3+i</m> to 1, <m>z_2 = i</m> to 0, and <m>z_3 = -3</m> to <m>\infty</m>.  Where does this M&#xf6;bius transformation send <m>2i</m>?
+            <sage>
+              <input>
+              </input>
+            </sage>
+          </li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <example xml:id="sage-mob-normal-form-2"><title>Normal form of a of M&#xf6;bius transformation, 2 fixed points</title>
+      <p>
+        We can determine the normal form of <m>T</m>, after we have determined its fixed point(s).  Here we tackle the case of 2 fixed points.
+      </p>
+      <p>
+        Consider the M&#xf6;bius transformation <me>T(z) = \frac{(6+3i)z+(2-3i)}{z+3}</me>, which has two fixed points: <m>p=i</m> and <m>q = 3 + 2i</m>.  In the cell below we let <c>L</c> denote <m>\lambda</m> in the normal form
+          <me>\frac{T(z)-p}{T(z)-q}=\lambda\frac{z-p}{z-q}</me>.  Our goal is to determine <m>L</m>, which we can do by asking Sage to solve the normal form equation for <m>L</m> after plugging in some value for <m>z</m>.  We choose <m>z = 0</m>, but any <m>z \neq p,q</m> would work.
+          <sage>
+            <input>
+              var('L')
+              T(z)=((6+3*I)*z+(2-3*I))/(z+3)
+              p=I
+              q=3+2*I
+              solve((T(0)-p)/(T(0)-q)==L*(0-p)/(0-q),L)
+            </input>
+            <output>
+              [L == 2]
+            </output>
+          </sage>
+        </p>
+      </example>
+       <example xml:id="sage-mob-normal-form-1"><title>Normal form of a of M&#xf6;bius transformation, 1 fixed point</title>
+          <p> In this case the normal form is 
+          <me>\frac{1}{T(z) - p} = \frac{1}{z-p} + d</me>.
+          As an example, consider <m>T(z) = (7z-12)/(3z-5)</m>, which fixes one point, <m>p=2</m>.  To find the normal form we find the complex constant <m>d</m>.
+          <sage>
+            <input>
+              var('d')
+              T(z)=(7*z-12)/(3*z-5)
+              p=2
+              solve(1/(T(0)-p)==1/(0-p)+d,d)
+            </input>
+            <output>[d == 3]
+            </output>
+          </sage>
+        </p>
+      </example>
+      <exercise>
+        <statement>
+          <p>
+            Use Sage cells to find the Normal form of <me>T(z)=\frac{iz+3i+2}{2iz-4-i}</me>.
+          </p>
+          <sage>
+            <input>
+            </input>
+          </sage>
+          <sage>
+            <input>
+            </input>
+          </sage>
+          <sage>
+            <input>
+            </input>
+          </sage>
+        </statement>
+        <solution>
+          Here we go!
+        </solution>
+      </exercise>
+
+      <example><title>The Fundamental Theorem of M&#xf6;bius transformations</title>
+      <p>
+        Determine the M&#xf6;bius transformation that sends the unique points <m>z_1, z_2</m>, and <m>z_3</m> to <m>w_1, w_2</m>, and <m>w_3</m>, respectively.
+      </p>
+      <sage>
+          <input>
+            var('z,w')
+            z1=0; z2=1; z3=I
+            w1=0; w2=I; w3=-1
+            T(z)=(z-z2)/(z-z3)*(z1-z3)/(z1-z2)
+            S(w)=(w-w2)/(w-w3)*(w1-w3)/(w1-w2)
+            solve(T(z)==S(w),w)
+          </input>
+          <output>[w == I*z]
+          </output>
+        </sage>
+        <p>
+          The output gives the unique M&#xf6;bius transformation that sends <m>z_1 \mapsto w_1</m>, <m>z_2 \mapsto w_2</m>, and <m>z_3 \mapsto w_3</m>.  In this example, the map fixes 0, sends 1 to <m>i</m> and <m>i</m> to <m>-1</m>, and it makes sense that the Sage cell produced rotation about the origin by <m>90^\circ</m>: <m>z \mapsto iz</m>.
+        </p>
+      </example>
+      <example><title>Transformations of <m>(\mathbb{D},{\cal H})</m></title>
+        <p>
+          A transformation in <m>\cal H</m> has the form
+          <me>
+            T(z) = e^{i\theta}\frac{z - z_0}{1-\overline{z}_0z}
+          </me>.
+          Sage can evaluate such functions for us.  Note that a map in <m>\cal H</m> is characterized by two constants, <m>\theta</m> and <m>z_0</m>, the point that gets sent to 0.  So we specify these values in the Sage cell.  In the example below, we consider <me>T(z) = e^{i\pi/2}\frac{z-1/2}{1-\overline{1/2}z}</me> and find <m>T(\frac{1}{2}i) = -\frac{2}{17}(3+5i)</m>.
+        </p>
+        <sage>
+          <input>
+            var('z')
+            theta=pi/4
+            z0=1/2
+            T(z)=e^(I*theta)*(z-z0)/(1-conjugate(z0)*z)
+            T(1/2*I)
+          </input>
+          <output>-(2/17*I + 8/17)*sqrt(2)</output>
+        </sage>
+      </example>
+      <example><title>Distance between points in <m>(\mathbb{D},{\cal H})</m></title>
+        <p>
+          The shortest path between points <m>p</m> and <m>q</m> in <m>(\mathbb{D},{\cal H})</m> is along the hyperbolic segement joining them, and we derive this distance, <m>d_H(p,q)</m>, in Section 5.3 to be
+			<me>
+            d_H(p,q) = \ln\left[\frac{|1-\overline{p}q|+|q-p|}{|1-\overline{p}q|-|q-p|}\right]
+          	</me>.
+          Here are two Sage cells, the first defines the distance function, and the second evaluates distance between two specified points.
+        </p>
+        <sage>
+          <input>
+            var('z','w')
+			d_H(z,w)=log((abs(1-conjugate(z)*w)+abs(w-z))/(abs(1-conjugate(z)*w)-abs(w-z)))
+          </input>
+          <output></output>
+        </sage>
+        <sage>
+          <input>
+			p=.2+.2*I
+			q=.5
+			d_H(p,q)
+          </input>
+          <output>0.842936256002507</output>
+      </sage>
+  </example>
+  	<example><title>Exercise 5.4.6</title> 
+        <p>If two sides of a hyperbolic triangle are Euclidean segments, then the included angle can be calculated using TODO.  For instance, the angle at 0 is <m>45^\circ</m>.</p>
+        <p> To find the angle at another corner, we first transform the triangle so that the corner is moved to the origin.  A Sage cell is handy here.  To move <m>\frac{1}{2}</m> to the origin, we use the following Sage cell to build such a map in <m>\cal H</m> and track the image of the other two points.</p>
+        <sage>
+          <input>
+            var('z')
+            theta=0
+            z0=1/2
+            T(z)=e^(I*theta)*(z-z0)/(1-conjugate(z0)*z)
+            print("T(0)=",T(0), "and T(1/2+1/2*I)=",T(1/2+1/2*I))
+          </input>
+          <output></output>
+        </sage>
+      </example>
+
+    </section>
+    <section><title>Blank Sage Cells</title>
+    <p>
+      Some blank Sage cells are provided here for your convenience.  Feel free to use them in your investigations.  Work in these cells cannot be saved, but as long as you don't reload the page results from one cell can be used in others.
+    </p>
+    <p>  
+      If you're interested in using Sage in such a way that you can save workbooks, you can sign up for an account at <url href="https://cocalc.com/">https://cocalc.com/</url>.
+    </p>
+
+    <sage>
+    <input>
+    </input>
+    </sage> 
+
+    <sage>
+    <input>
+    </input>
+    </sage> 
+
+    <sage>
+    <input>
+    </input>
+    </sage> 
+
+    <sage>
+    <input>
+    </input>
+    </sage> 
+
+    <sage>
+    <input>
+    </input>
+    </sage> 
+
+    <sage>
+    <input>
+    </input>
+    </sage> 
+
+    <sage>
+    <input>
+    </input>
+    </sage> 
+
+    <sage>
+    <input>
+    </input>
+    </sage> 
+  </section>
+
+</chapter>

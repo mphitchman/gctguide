@@ -1,0 +1,220 @@
+<worksheet><title>Key Features of M&#xf6;bius transformations built from two inversions</title>
+
+<p> 
+	In each case two clines are pictured, <m>C_1</m> and <m>C_2</m>.  Let <m>T</m> be the M&#xf6;bius Transformation we obtained by doing inversion across $C_1$ followed by inversion across $C_2$.  That is, $\displaystyle T = i_{C_2} \circ i_{C_1}$. In each case mark the fixed points $p$ and $q$ (if a second fixed point exists), of $T$, as well as the pole $z_\infty$ and the inverse pole $w_\infty$.  Your markings may be approximate, but you should be able to describe in words where these points are.  Finally, indicate whether the M&#xf6;bius Transformation is elliptic, hyperbolic, parabolic, or loxodromic.
+</p>
+</worksheet>
+
+<exercise><title>Circles that intersect in two points.</title>
+	<statement>
+		<p>
+
+			<sidebyside width="85%">
+				<image xml:id="im-inv-2circles-2pts">
+			      	<latex-image>
+			        	<![CDATA[
+						  \begin{tikzpicture}[scale=.8]
+			              \tkzDefPoint(0,0){o1}
+			              \tkzDefPoint(2,0){a1}
+			              \tkzDefPoint(2.5,0){o2}
+			              \tkzDefPoint(2.5,1){a2}
+			              \tkzDrawCircle[thin](o1,a1)
+			              \tkzDrawCircle[thin](o2,a2)
+			             % \draw[<->] (-4.3,0)--(4.3,0);
+			              %\draw[<->] (0,-3)--(0,4.3);
+			              \tkzDrawPoints(o1,o2)
+			              \draw (o1)++(270:2.25) node{\(C_1\)};
+			              \draw (o2)++(270:1.25) node{\(C_2\)};
+			              %\tkzLabelPoint[right](z){\(z\)}
+			             % \tkzLabelPoint[above](w){\(w\)    
+			              \begin{scope}[xshift=13cm]  
+			              \draw (0,1.5) node[left]{Fixed points:};
+					      \draw (0,0.5) node[left] {$z_\infty$:};
+					      \draw (0,-0.5) node[left]{$w_\infty$:};
+					      \draw (0,-1.5) node[left]{M\"ob classification:};
+				          \end{scope}    
+			       	      \end{tikzpicture}
+			         	]]>
+			     	</latex-image>
+			  	</image>
+			</sidebyside>
+		</p>
+	</statement>
+</exercise>
+
+<exercise><title>Circles that intersect in 1 point.</title>
+	<statement>
+		<p>
+			<sidebyside width="85%">
+				<image xml:id="im-inv-2circles-1pt">
+			      	<latex-image>
+			        	<![CDATA[
+							\begin{tikzpicture}[scale=.8]
+				              \tkzDefPoint(0,0){o1}
+				              \tkzDefPoint(2,0){a1}
+				              \tkzDefPoint(3,0){o2}
+				              \tkzDrawCircle[thin](o1,a1)
+				              \tkzDrawCircle[thin](o2,a1)
+				             % \draw[<->] (-4.3,0)--(4.3,0);
+				              %\draw[<->] (0,-3)--(0,4.3);
+				              \tkzDrawPoints(o1,o2)
+				              \draw (o1)++(270:2.25) node{\(C_1\)};
+				              \draw (o2)++(270:1.25) node{\(C_2\)};
+				              %\tkzLabelPoint[right](z){\(z\)}
+				             % \tkzLabelPoint[above](w){\(w\)   
+				              \begin{scope}[xshift=13cm]  
+				              \draw (0,1.5) node[left]{Fixed points:};
+							\draw (0,0.5) node[left] {$z_\infty$:};
+							\draw (0,-0.5) node[left]{$w_\infty$:};
+							\draw (0,-1.5) node[left]{M\"ob classification:};
+						    \end{scope}           
+					       	\end{tikzpicture}
+			         	]]>
+			     	</latex-image>
+			  	</image>
+			</sidebyside>
+		</p>
+	</statement>
+</exercise>
+<exercise><title>Circles that do not intersect.</title>
+<statement>
+	<p>
+
+			<sidebyside width="85%">
+				<image xml:id="im-inv-2circles-0pts">
+			      	<latex-image>
+			        	<![CDATA[
+							\begin{tikzpicture}[scale=.8]
+				              \tkzDefPoint(-1,0){o1}
+				              \tkzDefPoint(0.5,0){a1}
+				              \tkzDefPoint(3,0){o2}
+				              \tkzDefPoint(3,2){a2}
+				              \tkzDrawCircle[thin](o1,a1)
+				              \tkzDrawCircle[thin](o2,a2)
+				             % \draw[<->] (-4.3,0)--(4.3,0);
+				              %\draw[<->] (0,-3)--(0,4.3);
+				              \tkzDrawPoints(o1,o2)
+				              \draw (o1)++(270:1.75) node{\(C_1\)};
+				              \draw (o2)++(270:2.25) node{\(C_2\)};
+				              %\tkzLabelPoint[right](z){\(z\)}
+				             % \tkzLabelPoint[above](w){\(w\)  
+				              \begin{scope}[xshift=13cm]  
+				             	\draw (0,1.5) node[left]{Fixed points:};
+						\draw (0,0.5) node[left] {$z_\infty$:};
+						\draw (0,-0.5) node[left]{$w_\infty$:};
+						\draw (0,-1.5) node[left]{M\"ob classification:};
+					    \end{scope}             
+				       	\end{tikzpicture}
+			         	]]>
+			     	</latex-image>
+			  	</image>
+			</sidebyside>
+		</p>
+	</statement>
+</exercise>
+<exercise><title>A line and a circle intersecting two points</title>
+<statement>
+	<p>
+			<sidebyside width="85%">
+				<image xml:id="im-inv-lincircle-2pts">
+			      	<latex-image>
+			        	<![CDATA[
+							\begin{tikzpicture}[scale=.8]
+				              \tkzDefPoint(0,0){o1}
+				              \tkzDefPoint(2,0){a1}
+				              \tkzDefPoint(1.5,-2.7){o2}
+				              %\tkzDefPoint(3,2){a2}
+				              \tkzDrawCircle[thin](o1,a1)
+				              %\tkzDrawCircle[thin](o2,a2)
+				              \draw[<->] (1.5,-3)--(1.5,3);
+				              %\draw[<->] (0,-3)--(0,4.3);
+				              \tkzDrawPoints(o1)
+				              \draw (o1)++(270:1.75) node{\(C_1\)};
+				              \draw (o2)++(0:.4) node{\(C_2\)};
+				              %\tkzLabelPoint[right](z){\(z\)}
+				             % \tkzLabelPoint[above](w){\(w\)              
+				              \begin{scope}[xshift=13cm]  
+				             	\draw (0,1.5) node[left]{Fixed points:};
+						\draw (0,0.5) node[left] {$z_\infty$:};
+						\draw (0,-0.5) node[left]{$w_\infty$:};
+						\draw (0,-1.5) node[left]{M\"ob classification:};
+					    \end{scope} 
+					 \end{tikzpicture}
+			         	]]>
+			     	</latex-image>
+			  	</image>
+			</sidebyside>
+		</p>
+	</statement>
+</exercise>
+<exercise><title>A line and a circle that intersect at 1 point.</title>
+	<statement>
+		<p>
+			<sidebyside width="85%">
+				<image xml:id="im-inv-lincircle-1pt">
+			      	<latex-image>
+			        	<![CDATA[
+							\begin{tikzpicture}[scale=.8]
+				              \tkzDefPoint(0,0){o1}
+				              \tkzDefPoint(2,0){a1}
+				              \tkzDefPoint(2,-2.7){o2}
+				              %\tkzDefPoint(3,2){a2}
+				              \tkzDrawCircle[thin](o1,a1)
+				              %\tkzDrawCircle[thin](o2,a2)
+				              \draw[<->] (2,-3)--(2,3);
+				              %\draw[<->] (0,-3)--(0,4.3);
+				              \tkzDrawPoints(o1)
+				              \draw (o1)++(270:1.75) node{\(C_1\)};
+				              \draw (o2)++(0:.4) node{\(C_2\)};
+				              %\tkzLabelPoint[right](z){\(z\)}
+				             % \tkzLabelPoint[above](w){\(w\) 
+				              \begin{scope}[xshift=13cm]  
+				             	\draw (0,1.5) node[left]{Fixed points:};
+						\draw (0,0.5) node[left] {$z_\infty$:};
+						\draw (0,-0.5) node[left]{$w_\infty$:};
+						\draw (0,-1.5) node[left]{M\"ob classification:};
+					    \end{scope}               
+				       	\end{tikzpicture}
+			         	]]>
+			     	</latex-image>
+			  	</image>
+			</sidebyside>
+		</p>
+	</statement>
+</exercise>
+<exercise><title>A line and a circle that do not intersect</title>
+	<statement>
+		<p>
+			<sidebyside width="85%">
+				<image xml:id="im-inv-lincircle-0pts">
+			      	<latex-image>
+			        	<![CDATA[
+							\begin{tikzpicture}[scale=.8]
+				              \tkzDefPoint(0,0){o1}
+				              \tkzDefPoint(2,0){a1}
+				              \tkzDefPoint(2.5,-2.7){o2}
+				              %\tkzDefPoint(3,2){a2}
+				              \tkzDrawCircle[thin](o1,a1)
+				              %\tkzDrawCircle[thin](o2,a2)
+				              \draw[<->] (2.5,-3)--(2.5,3);
+				              %\draw[<->] (0,-3)--(0,4.3);
+				              \tkzDrawPoints(o1)
+				              \draw (o1)++(270:1.75) node{\(C_1\)};
+				              \draw (o2)++(0:.4) node{\(C_2\)};
+				              %\tkzLabelPoint[right](z){\(z\)}
+				             % \tkzLabelPoint[above](w){\(w\) 
+				              \begin{scope}[xshift=13cm]  
+				             	\draw (0,1.5) node[left]{Fixed points:};
+						\draw (0,0.5) node[left] {$z_\infty$:};
+						\draw (0,-0.5) node[left]{$w_\infty$:};
+						\draw (0,-1.5) node[left]{M\"ob classification:};
+					    \end{scope}               
+				       	\end{tikzpicture}
+			         	]]>
+			     	</latex-image>
+			  	</image>
+			</sidebyside>
+		</p>
+	</statement>
+</exercise>
+</worksheet>

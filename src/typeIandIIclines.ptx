@@ -1,0 +1,55 @@
+<worksheet><title>Constructing Type I and Type II clines of <m>p</m> and <m>q</m></title>
+        At <url href="https://www.geogebra.org">geogebra.org</url> open the app <url href="https://www.geogebra.org/geometry">geometry</url>.
+      </p>
+      <exercise><title>The Type I cline of <m>p</m> and <m>q</m> through <m>z</m></title>
+        <statement>
+          <ol label="a.">
+            <li>
+              Plot three points labelled <m>P</m>, <m>Q</m>, and <m>Z</m> on your canvas.
+            </li>
+            <li>
+              With the perpendicular bisector tool construct the perpendicular bisector between <m>P</m> and <m>Q</m>, and the perpendicular bisector between <m>P</m> and <m>Z</m>. 
+            </li>
+            <li>
+              Construct the point at which these perpendicular bisectors intersect, label this point <m>O</m>.
+            </li>
+            <li>
+              Construct the circle centered at <m>O</m> through <m>Z</m>.  This is the type I cline of <m>P</m> and <m>Q</m> through <m>Z</m>.
+            </li>
+            <li>
+              Hide intermediate constructions so that all we see on the canvas are the three points <m>P</m>, <m>Q</m>, and <m>Z</m>, and the type I cline of <m>P</m> and <m>Q</m> through <m>Z</m>.  Drag <m>Z</m> around to check the dynamic nature of your construction.  
+            </li>
+          </ol>
+          <p>
+            Two comments: First, this construction assumes <m>Z</m> is not on the line through <m>P</m> and <m>Q</m>.  (If <m>Z</m> is on this line, then the type I cline of <m>P</m> and <m>Q</m> through <m>Z</m> is this line.)  Second, <em>Geogebra</em> has a tool for constructing this cline, the tool <q>circle through 3 points</q>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise><title>The Type II cline of <m>p</m> and <m>q</m> through <m>z</m></title>
+        <statement>
+          <ol label="a.">
+            <li>
+              Given the three points <m>P</m>, <m>Q</m>, and <m>Z</m> from the previous exercise, show again the point <m>O</m>, which is the center of the type I cline of <m>P</m> and <m>Q</m> through <m>Z</m>.
+            </li>
+            <li>
+              Construct segment <m>OZ</m>, and construct line <m>PQ</m>.
+            </li>
+            <li>
+              Construct the line perpendicular to segment <m>OZ</m> at the point <m>Z</m>. Call this line <m>m</m>.
+            </li>
+            <li>
+              Determine the point <m>C</m> at which line <m>m</m> intersects line <m>PQ</m>.
+            </li>
+            <li>
+              Construct the circle centered at <m>C</m> through <m>Z</m>.  This is the type II cline of <m>P</m> and <m>Q</m> through <m>Z</m>.
+            </li>
+            <li>Hide intermediate constructions, so that you just see on the canvas the three points <m>P</m>, <m>Q</m>, and <m>Z</m>, the type I cline of <m>P</m> and <m>Q</m> through <m>Z</m>, and the type II cline of <m>P</m> and <m>Q</m> through <m>Z</m>.
+          </ol>
+          <p>
+            Two comments: First, the construction of the type II cline also assumes <m>Z</m> is not on the line through <m>P</m> and <m>Q</m>.  Second, <em>Geogebra</em> does not have a built-in tool for constructing type II clines, but we can create a custom tool that achieves this.
+          </p>
+        </statement>
+      </exercise>
+
+      
+    </worksheet>

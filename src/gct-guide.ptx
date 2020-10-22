@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This activity booklet complements M.P.Hitchman's text  -->
+<!-- Geometry with an Introduction to Cosmic Topology       -->
+<!-- Copyright (©) 2020 MPHitchman       -->
+
+
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <brandlogo url="https://mphitchman.com/geometry" source="images/im-coverimage-icon.svg"/>
+
+    <images>
+      <archive>eps pdf png svg tex</archive>
+    </images>
+
+    <macros>
+      \newcommand{\nin}{}
+    </macros>
+
+    <latex-image-preamble>
+      \usepackage{tikz}
+      \usepackage{pstricks}
+      \usepackage{phaistos}
+      \usepackage{xcolor}
+      \usepackage{tkz-euclide}
+      \usetkzobj{all}
+      \usepackage{pgfplots}
+      \pgfplotsset{compat=1.16}
+      \pgfkeys{/pgf/declare function={arccosh(\x) = ln(\x + sqrt(\x^2-1));}}
+      \tikzset{->-/.style={decoration={
+            markings,
+            mark=at position #1 with {\arrow{>}}},postaction={decorate}}}
+
+      \tikzset{
+        arrowMe/.style={postaction=decorate,
+          decoration={markings, mark=at position .8 with {\arrow[thick]{#1}}
+          } }}
+
+      \newcommand{\hypsegment}[4]{
+            \tkzDefPointBy[inversion = center #3 through #4](#1)
+            \tkzGetPoint{p*}
+            \tkzCircumCenter(#1,#2,p*)\tkzGetPoint{c}
+        \tkzDrawArc[color=black](c,#1)(#2)
+      }
+
+      \newcommand{\hyperpbisector}[4]{
+          \tkzDefPointBy[inversion = center #3 through #4](#1)
+          \tkzGetPoint{p*}
+          \tkzCircumCenter(#1,#2,p*)\tkzGetPoint{c}
+          \tkzTangent[at=#2](c)\tkzGetPoint{hp}
+          \tkzInterLL(#2,hp)(#3,#1) \tkzGetPoint{cp}
+          \tkzDefPointBy[inversion = center #3 through #4](#2)
+          \tkzGetPoint{q*}
+          \tkzTangent[at=#1](c)\tkzGetPoint{hq}
+          \tkzInterLL(#1,hq)(#3,#2) \tkzGetPoint{cq}
+          \tkzInterCC(cq,#1)(cp,#2) \tkzGetPoints{u}{v}
+          \tkzClipCircle(#3,#4)
+          \tkzDrawCircle[color=red,orthogonal through=u and v](#3,#4)    
+        }
+      \newcommand{\typeIIcline}[4][]{%%% the type II cline of (#2) and (#3) through (#4)
+        \tkzCircumCenter(#2,#3,#4)\tkzGetPoint{o}
+        \tkzDefLine[perpendicular=through #4,K=1](o,#4)\tkzGetPoint{w};
+        \tkzInterLL(#4,w)(#2,#3)\tkzGetPoint{c}
+        \tkzDrawCircle[#1](c,#4)
+      }
+      \newcommand{\arcThroughThreePoints}[4][]{%%%the arc from #2 to #4 through #3
+        \tkzCircumCenter(#2,#3,#4)\tkzGetPoint{c}
+        \tkzDrawArc[#1](c,#2)(#4)
+}
+    </latex-image-preamble>
+
+    <initialism>GCTA</initialism>
+
+    <document-id>mph-GCT-guide</document-id>
+
+    <html>
+      <favicon/>
+      <baseurl href="https://mphitchman.com" />
+    </html>
+
+  </docinfo>
+
+  <book xml:id="gct-guide">
+    <title>GCT Activities</title>
+
+    <frontmatter xml:id="frontmatter">
+      <titlepage>
+        <author>
+            <personname>Michael P. Hitchman</personname>
+            <department>Mathematics Department</department>
+            <institution>
+                <line>Linfield University</line>
+                <line>McMinnville, Oregon, USA</line>
+            </institution>
+            <email>mhitchm@linfield.edu</email>
+        </author>
+        <date><today /></date>
+      </titlepage>
+
+      <abstract>
+        <p>
+          This activity guide complements material in <em>Geometry with an Introduction to Cosmic Topology</em>.  This guide includes web-based computational tools (primarily Sage cells) for working with complex numbers and transformation of the extended complex plane, and Geogebra tools and labs for working with clines in the plane.  The guide also provides several worksheets for student group work or independent study.  This activity guide was authored in <pretext/> and, along with the textbook, is freely available at <url href="https://mphitchman.com">mphitchman.com</url>.
+        </p>
+      </abstract>
+    </frontmatter>
+
+    <xi:include href="sage.ptx" />
+    <xi:include href="geogebra.ptx" />
+    <!-- <xi:include href="m320labs.ptx" />      
+    <xi:include href="Mobius-activities.ptx" />
+    <xi:include href="Hyperbolic-activities.ptx" />
+    <xi:include href="Elliptic-activities.ptx" /> -->
+
+    <!-- <backmatter>
+       <index>
+        <title>Index</title>
+
+        <introduction>
+          <p>
+            TODO
+          </p>
+        </introduction>
+
+        <index-list />
+      </index>
+
+    </backmatter>-->
+
+  </book>
+
+</pretext>
