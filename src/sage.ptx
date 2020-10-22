@@ -76,11 +76,12 @@
   <section><title>Sage for GCT</title>
   <p>In this section, Sage cells have been provided that help us do the following:
     <ol>
-      <li>Convert between polar and Cartesian form (Section 2.2)</li>
-      <li>The angle determined by three points (Section 2.3)</li>
-      <li>Analyze basic transformations of the plane (Section 3.1)</li>
-      <li>Analyze Mobs</li>
-      <li></li>
+      <li>Convert between polar and Cartesian form (GCT Section 2.2)</li>
+      <li>The angle determined by three points (GCT Section 2.3)</li>
+      <li>Analyze basic transformations of the plane (GCT Section 3.1)</li>
+      <li>Analyze M&#xf6;bius transformations (GCT Sections 3.4,5</li>
+      <li>Evaluate transformations in <m>(\mathbb{D},{\cal H})</m> (GCT Section 5.1)</li>
+      <li>Compute the hyperbolic distance between two points (GCT Section 5.3)</li>
     </ol>
   </p>
   <p>You may alter them to your purposes as you work through the homewok.</p>
