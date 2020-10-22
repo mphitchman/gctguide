@@ -1,0 +1,1 @@
+These pages, still in development, and written by Michael P. Hitchman, provide activities to supplement the content in the text Geometry with an Introduction to Cosmic Topology, by Michael P. Hitchman, focusing on two tools: Sage cells and Geogebra.
