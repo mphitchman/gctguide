@@ -52,10 +52,10 @@
             In this exercise we construct the point symmetric to <m>Z</m> with respect to the circle <m>c</m> where <m>Z</m> is inside the circle.
             <ol label="a.">
               <li>
-                Construct a point inside the circle, and label it <m>Z</m>.  Then construct the ray <m>\vec{Z_0Z}</m>.
+                Construct a point inside the circle, and label it <m>Z</m>.  Then construct the ray <m>\overrightarrow{Z_0Z}</m>.
               </li>
               <li>
-                Construct the line perpendicular to ray <m>\vec{Z_0Z}</m> at the point <m>Z</m>.  Call this line <m>m</m> (lines get lower case letters).
+                Construct the line perpendicular to ray <m>\overrightarrow{Z_0Z}</m> at the point <m>Z</m>.  Call this line <m>m</m> (lines get lower case letters).
               </li>
               <li>
                 With the point tool selected, define one of the points at which <m>m</m> intersects the circle and label this point <m>T</m>.
