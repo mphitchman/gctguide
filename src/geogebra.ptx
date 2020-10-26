@@ -4,12 +4,12 @@
   <title>Geogebra for GCT</title>
   <introduction>
   	<p>
-      Geogebra offers dynamic compass and ruler constructions online.  We use this program often in our investigations.  Indeed much of the key developments in the text rely on compass and ruler constructions, and to understand them we need to get in and work with them.
+      <em>Geogebra</em> offers dynamic compass and ruler constructions online.  We use this program often in our investigations.  Indeed much of the key developments in the text rely on compass and ruler constructions, and to understand them we need to get in and work with them.
     </p>
   </introduction>
-  <section><title>Getting to know Geogebra</title>
+  <section><title>Introduction</title>
       <p>
-      You can access Geogebra apps in a few ways. Click on the <c>Calc</c> button near the top of this page to open a Geogebra window on the right of this screen.  This can be handy from time to time.  You can also open the Geogebra apps at their website <url href="https://www.geogebra.org">geogebra.org</url>.    
+      You can access <em>Geogebra</em> apps in a few ways. Click on the <c>Calc</c> button near the top of this page to open a <emGeogebra</em> window on the right of this screen.  This can be handy from time to time.  You can also open the <em>Geogebra</em> apps at their website <url href="https://www.geogebra.org">geogebra.org</url>.    
     </p>
     <p>
       Lots of good <em>Geogebra</em> demonstrations are available in their gallery.  We will use some demonstrations specific to this text as well.  For class activities, it will be best to use Geogebra from their website, or from a file provided in these pages, rather than from a <em>Geogebra</em> file embedded on this page.  But we embed one file here to demonstrate that <em>Geogebra</em> has been built to offer us dynamic compass and ruler constructions. <p>The <em>Geogebra</em> file embedded below can be viewed (and edited) externally <url href="https://www.geogebra.org/classic/fnpyf732">here</url>.</p>
@@ -38,7 +38,7 @@
         At <url href="https://www.geogebra.org">geogebra.org</url> look for the list of apps under the heading <em>Powerful Math Apps</em>.  For this we want to use the app <url href="https://www.geogebra.org/geometry">geometry</url>.
       </p>
       <p>
-        When you open the Geometry app, you should see a blank canvas on the right and a pallette of tools on the left.  We will want more than the basic tools, so click on <em>MORE</em> to see them all.  
+        When you open the Geometry app, you should see a blank canvas on the right and a palette of tools on the left.  We will want more than the basic tools, so click on <em>MORE</em> to see them all.  
       </p>
       <p>
         To familiarize yourself with this app, work through the following constructions.
@@ -47,7 +47,7 @@
       <exercise>
         <statement>
           <p>
-            Construct a circle.  Label the center of the circle <m>Z_0</m>. Label the circle itself as <m>c</m>.  One quirk with Geogebra is that points must be labelled by capital letters, and lines and circles must be labelled by lower case letters.
+            Construct a circle.  Label the center of the circle <m>Z_0</m>. Label the circle itself as <m>c</m>.  One quirk with <em>Geogebra</em> is that points must be labelled by capital letters (though you can display <q>captions</q> instead of labels), and lines and circles must be labelled by lower case letters.
           </p>
           <p>
             To change an object's label, click the <em>Move</em> tool and select the object.  A window should appear with a text box.  Click that to change the label.  To get <m>Z_0</m> type <em>Z_0</em>. 
@@ -179,7 +179,7 @@
       </exercise>     
     </worksheet>
     <p>
-      Remark: The file you open in the next worksheet has this type II cline construction saved as a custom tool.  You can create your own custom tools in <em>Geogebra Classic</em> (but not other Geogebra Apps, as far as I know). A custom tool is super useful if you expect to repeat a particular construction often in a <em>Geogebra</em> project.  Very roughly to create a custom tool based on a construction you've done in <em>Geogebra Classic</em>, begin by selecting the <em>tools</em> option from the main drop-down menu, (the three bars icon in the upper right portion of the <em>Geogebra</em> window).
+      Remark: The file you open in the next worksheet has this type II cline construction saved as a custom tool.  You can create your own custom tools in <em>Geogebra Classic</em> (but not other Geogebra Apps, as far as I know). A custom tool is super useful if you expect to repeat a particular construction often in a <em>Geogebra</em> project.  Very roughly to create a custom tool based on a construction you've done in <em>Geogebra Classic</em>, begin by selecting the <em>tools</em> option from the main drop-down menu, (the three bars icon in the upper right portion of the <em>Geogebra</em> window).  Then select the <q>Create New Tool</q> option to get started.
     </p>
 <worksheet><title>Geogebra Lab 3: Constructing figures in <m>(\mathbb{D},{\cal H})</m></title>
         <p>
