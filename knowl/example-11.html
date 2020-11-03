@@ -12,9 +12,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
 </head>
 <body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
+<article class="example example-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Distance between points in \((\mathbb{P}^2,{\cal S})\).</span>
+</h6>
 <p>The shortest path between points \(p\) and \(q\) in \((\mathbb{P}^2,{\cal S})\) is along the elliptic segement joining them, and we derive this distance, \(d_S(p,q)\text{,}\) in Section 6.3 to be</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
@@ -22,6 +33,12 @@ d_S(p,q)=~\text{min}\left\{2\arctan\left(\left|\frac{q - p}{1+\overline{p}q}\rig
 \end{equation*}
 </div>
 <p data-braille="continuation">Here are two Sage cells, the first defines the distance function, and the second evaluates distance between two specified points.</p>
-<span class="incontext"><a href="section-2.html#p-35">in-context</a></span>
+<div class="sagecell-sage" id="sage-25"><script type="text/x-sage">            var('z','w')
+d_S(z,w)=2*min_symbolic(atan(abs(z-w)/abs(1+conjugate(w)*z)),atan(abs(1+conjugate(w)*z)/abs(z-w)))
+</script></div>
+<div class="sagecell-sage" id="sage-26"><script type="text/x-sage">p=.9
+q=-.9
+d_S(p,q)
+</script></div></article><span class="incontext"><a href="section-2.html#example-11">in-context</a></span>
 </body>
 </html>

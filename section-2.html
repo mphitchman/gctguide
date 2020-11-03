@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-10-26T15:52:29-07:00       *-->
+<!--*       on 2020-11-03T08:00:17-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -132,6 +132,7 @@ true);
 <li id="li-12">Analyze Möbius transformations (GCT Sections 3.4,5</li>
 <li id="li-13">Evaluate transformations in \((\mathbb{D},{\cal H})\) (GCT Section 5.1)</li>
 <li id="li-14">Compute the hyperbolic distance between two points (GCT Section 5.3)</li>
+<li id="li-15">Compute the elliptic distance between two points (GCT Section 6.3)</li>
 </ol>
 <p id="p-14">You may alter them to your purposes as you work through the homewok.</p>
 <article class="example example-like" id="sage-cart-and-polar-form"><h6 class="heading">
@@ -151,12 +152,12 @@ print ("theta is about",t_approx,"degrees")
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
 </h6>
 <ol class="decimal">
-<li id="li-15">
+<li id="li-16">
 <p id="p-17">Convert the following complex numbers to Polar form: \(z = 2 + 4i\text{,}\) \(w = 4-3i\text{,}\) and \(v = -1-2i\text{.}\)</p>
 <div class="sagecell-sage" id="sage-7"><script type="text/x-sage">
 </script></div>
 </li>
-<li id="li-16">
+<li id="li-17">
 <p id="p-18">Convert the following complex numbers to Cartesian form: \(z= 2e^{i\pi/4}\text{,}\) \(w = 5e^{i5\pi/6}\text{,}\) and \(v = 2e^{3}\text{.}\)</p>
 <div class="sagecell-sage" id="sage-8"><script type="text/x-sage">
 </script></div>
@@ -164,8 +165,8 @@ print ("theta is about",t_approx,"degrees")
 </ol>
 <div class="solutions">
 <a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><ol class="decimal">
-<li id="li-17">\(z= 2\sqrt{5}e^{i\arctan(2)}\text{,}\) \(w = 5e^{-i\arctan(3/4)} \text{,}\) and \(v = \sqrt{5}e^{i(-\pi+\arctan(2)}\text{.}\)</li>
-<li id="li-18">
+<li id="li-18">\(z= 2\sqrt{5}e^{i\arctan(2)}\text{,}\) \(w = 5e^{-i\arctan(3/4)} \text{,}\) and \(v = \sqrt{5}e^{i(-\pi+\arctan(2)}\text{.}\)</li>
+<li id="li-19">
 <p id="p-19">By default, Sage outputs a complex expression in Cartesian form, so we need only enter and evaluate the polar form expression to do this conversion.</p>
 <p id="p-20">\(z= \sqrt{2}(1+i)\text{,}\) \(w = -\frac{5}{2}(\sqrt{3}-i)\text{,}\) \(v = 2e^3\) (this is a real number!)</p>
 </li>
@@ -208,10 +209,10 @@ print("T(z) =",T(z))
 </script></div></p>
 <p id="p-24">We can determine various features of our Möbius transformation, including:</p>
 <ol class="decimal">
-<li id="li-19">det\((T)\text{,}\)</li>
-<li id="li-20">the pole of \(T\text{,}\) \(z_\infty\text{,}\) provided \(c \neq 0\)</li>
-<li id="li-21">the inverse pole of \(T\text{,}\) \(w_\infty\text{,}\) provided \(c \neq 0\text{,}\) and</li>
-<li id="li-22">the fixed points of \(T\)</li>
+<li id="li-20">det\((T)\text{,}\)</li>
+<li id="li-21">the pole of \(T\text{,}\) \(z_\infty\text{,}\) provided \(c \neq 0\)</li>
+<li id="li-22">the inverse pole of \(T\text{,}\) \(w_\infty\text{,}\) provided \(c \neq 0\text{,}\) and</li>
+<li id="li-23">the fixed points of \(T\)</li>
 </ol>
 <p data-braille="continuation">. Note: If \(c = 0\text{,}\) the Möbius transformation \(T\) is a general linear transformation, and in this case \(T(\infty)=\infty\text{.}\) <div class="sagecell-sage" id="sage-12"><script type="text/x-sage">print("det(T) = ",a*d-b*c)
 zinf = -d/c
@@ -224,10 +225,10 @@ solve(T(z)-z,z)
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
 </h6>
 <ol class="decimal">
-<li id="li-23">Determine the cross ratio of the points \(3+i, 2+4i\text{,}\) \(3-i\text{,}\) and \(4\text{.}\) <div class="sagecell-sage" id="sage-13"><script type="text/x-sage">
+<li id="li-24">Determine the cross ratio of the points \(3+i, 2+4i\text{,}\) \(3-i\text{,}\) and \(4\text{.}\) <div class="sagecell-sage" id="sage-13"><script type="text/x-sage">
 </script></div>
 </li>
-<li id="li-24">Define the Möbius transformation that sends \(z_1 = 3+i\) to 1, \(z_2 = i\) to 0, and \(z_3 = -3\) to \(\infty\text{.}\)  Where does this Möbius transformation send \(2i\text{?}\) <div class="sagecell-sage" id="sage-14"><script type="text/x-sage">
+<li id="li-25">Define the Möbius transformation that sends \(z_1 = 3+i\) to 1, \(z_2 = i\) to 0, and \(z_3 = -3\) to \(\infty\text{.}\)  Where does this Möbius transformation send \(2i\text{?}\) <div class="sagecell-sage" id="sage-14"><script type="text/x-sage">
 </script></div>
 </li>
 </ol></article><article class="example example-like" id="sage-mob-normal-form-2"><h6 class="heading">
@@ -339,6 +340,22 @@ theta=0
 z0=1/2
 T(z)=e^(I*theta)*(z-z0)/(1-conjugate(z0)*z)
 print("T(0)=",T(0), "and T(1/2+1/2*I)=",T(1/2+1/2*I))
+</script></div></article><article class="example example-like" id="example-11"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Distance between points in \((\mathbb{P}^2,{\cal S})\).</span>
+</h6>
+<p id="p-35">The shortest path between points \(p\) and \(q\) in \((\mathbb{P}^2,{\cal S})\) is along the elliptic segement joining them, and we derive this distance, \(d_S(p,q)\text{,}\) in Section 6.3 to be</p>
+<div class="displaymath">
+\begin{equation*}
+d_S(p,q)=~\text{min}\left\{2\arctan\left(\left|\frac{q - p}{1+\overline{p}q}\right|\right), 2\arctan\left(\left|\frac{1+\overline{p}q}{q-p}\right|\right)\right\}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Here are two Sage cells, the first defines the distance function, and the second evaluates distance between two specified points.</p>
+<div class="sagecell-sage" id="sage-25"><script type="text/x-sage">            var('z','w')
+d_S(z,w)=2*min_symbolic(atan(abs(z-w)/abs(1+conjugate(w)*z)),atan(abs(1+conjugate(w)*z)/abs(z-w)))
+</script></div>
+<div class="sagecell-sage" id="sage-26"><script type="text/x-sage">p=.9
+q=-.9
+d_S(p,q)
 </script></div></article></section></div></main>
 </div>
 <!--Start: StatCounter code--><script>

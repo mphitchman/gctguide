@@ -100,7 +100,7 @@
 
       <abstract>
         <p>
-          This activity guide complements material in <em>Geometry with an Introduction to Cosmic Topology</em>.  This guide includes web-based computational tools (primarily Sage cells) for working with complex numbers and transformation of the extended complex plane, and Geogebra tools and labs for working with clines in the plane.  The guide also provides several worksheets for student group work or independent study.  This activity guide was authored in <pretext/> and, along with the textbook, is freely available at <url href="https://mphitchman.com">mphitchman.com</url>.
+          This activity guide complements material in <em>Geometry with an Introduction to Cosmic Topology</em>.  In this guide students can use Sage cells to work with complex numbers and transformation of the extended complex plane, and <em>Geogebra</em> to develop dynamic compass and ruler constructions for studying features in Euclidean, hyperbolic, and elliptic geometries.  The guide provides several worksheets for student group work or independent study with <em>Geogebra</em>.  This activity guide was authored in <pretext/> and, along with the textbook, is freely available at <url href="https://mphitchman.com">mphitchman.com</url>.
         </p>
       </abstract>
     </frontmatter>

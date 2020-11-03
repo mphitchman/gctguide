@@ -82,6 +82,7 @@
       <li>Analyze M&#xf6;bius transformations (GCT Sections 3.4,5</li>
       <li>Evaluate transformations in <m>(\mathbb{D},{\cal H})</m> (GCT Section 5.1)</li>
       <li>Compute the hyperbolic distance between two points (GCT Section 5.3)</li>
+      <li>Compute the elliptic distance between two points (GCT Section 6.3)</li>
     </ol>
   </p>
   <p>You may alter them to your purposes as you work through the homewok.</p>
@@ -361,6 +362,31 @@
           <output></output>
         </sage>
       </example>
+      <example><title>Distance between points in <m>(\mathbb{P}^2,{\cal S})</m></title>
+        <p>
+          The shortest path between points <m>p</m> and <m>q</m> in <m>(\mathbb{P}^2,{\cal S})</m> is along the elliptic segement joining them, and we derive this distance, <m>d_S(p,q)</m>, in Section 6.3 to be
+        <me>
+            d_S(p,q)=~\text{min}\left\{2\arctan\left(\left|\frac{q - p}{1+\overline{p}q}\right|\right), 2\arctan\left(\left|\frac{1+\overline{p}q}{q-p}\right|\right)\right\}
+        </me>.
+          Here are two Sage cells, the first defines the distance function, and the second evaluates distance between two specified points.
+        </p>
+        <sage>
+          <input>
+            var('z','w')
+d_S(z,w)=2*min_symbolic(atan(abs(z-w)/abs(1+conjugate(w)*z)),atan(abs(1+conjugate(w)*z)/abs(z-w)))
+
+          </input>
+          <output></output>
+        </sage>
+        <sage>
+          <input>
+      p=.9
+      q=-.9
+      d_S(p,q)
+          </input>
+          <output>0.210332246443767</output>
+      </sage>
+  </example>
 
     </section>
     <section><title>Blank Sage Cells</title>

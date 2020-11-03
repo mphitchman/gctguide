@@ -416,7 +416,7 @@
   <exercise>
     <statement>
       <p> 
-        Focus on line <m>m</m> again.  If necessary, move <m>P</m> and <m>Q</m> around so that <m>m</m> is not a Euclidean line.  There is a single point in the unit disk that is equidistant from every single point on <m>m</m>.  Construct this point and label it ``home base.''  Save your file as {\tt your name\_elliptic.ggb} and add it your homework folder.
+        Focus on line <m>m</m> again.  If necessary, move <m>P</m> and <m>Q</m> around so that <m>m</m> is not a Euclidean line.  There is a single point in the unit disk that is equidistant from every single point on <m>m</m>.  Construct this point and give it the caption <q>home base</q>.  Save your file as <em>your name_elliptic.ggb</em> and add it your homework folder.
       </p>
     </statement>
   </exercise>
