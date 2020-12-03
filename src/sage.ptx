@@ -389,7 +389,7 @@ d_S(z,w)=2*min_symbolic(atan(abs(z-w)/abs(1+conjugate(w)*z)),atan(abs(1+conjugat
   </example>
 
     </section>
-    <section><title>Blank Sage Cells</title>
+    <section xml:id="sage-cells"><title>Blank Sage Cells</title>
     <p>
       Some blank Sage cells are provided here for your convenience.  Feel free to use them in your investigations.  Work in these cells cannot be saved, but as long as you don't reload the page results from one cell can be used in others.
     </p>

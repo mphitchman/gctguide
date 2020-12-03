@@ -106,7 +106,7 @@
     </frontmatter>
 
     <xi:include href="sage.ptx" />
-    <xi:include href="geogebraB.ptx" />
+    <xi:include href="geogebra.ptx" />
     <!-- <xi:include href="m320labs.ptx" />      
     <xi:include href="Mobius-activities.ptx" />
     <xi:include href="Hyperbolic-activities.ptx" />
