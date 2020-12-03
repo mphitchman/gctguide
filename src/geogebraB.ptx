@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<chapter xml:id="geogebra">
+  <title>Geogebra for GCT</title>
+  <introduction>
+  	<p>
+      <em>Geogebra</em> offers dynamic compass and ruler constructions online.  We use this program often in our investigations.  Indeed much of the key developments in the text rely on compass and ruler constructions, and to understand them we need to get in and work with them.
+    </p>
+  </introduction>
+  <section xml:id="ggb-intro"><title>Introduction</title>
+      <p>
+      You can access <em>Geogebra</em> apps in a few ways. Click on the <c>Calc</c> button near the top of this page to open a <em>Geogebra</em> window on the right of this screen.  This can be handy from time to time.  You can also open the <em>Geogebra</em> apps at their website <url href="https://www.geogebra.org">geogebra.org</url>.    
+    </p>
+    <p>
+      Lots of good <em>Geogebra</em> demonstrations are available in their gallery.  We will use some demonstrations specific to this text as well.  For class activities, it will be best to use Geogebra from their website, or from a file provided in these pages, rather than from a <em>Geogebra</em> file embedded on this page.  But we embed one file here to demonstrate that <em>Geogebra</em> has been built to offer us dynamic compass and ruler constructions. <p>The <em>Geogebra</em> file embedded below can be viewed (and edited) externally <url href="https://www.geogebra.org/classic/fnpyf732">here</url>.</p>
+    </p>
+    <p>
+        <interactive width="100%" height="100%" geogebra="fnpyf732" />
+    </p>
+</section>
+<section xml:id="ggb-activites"><title>Geogebra Activities</title>
+<introduction>
+<assemblage><title><em>Classic Geogebra</em> files with custom tools</title>
+      <p> 
+        <ul>
+          <li>
+            <url href="https://www.geogebra.org/classic/bbuxpqrv">hyperbolic tools</url>. Custom tools for constructions in <m>(\mathbb{D},{\cal H})</m>, used in Lab 4.
+          </li>
+          <li>
+            <url href="https://www.geogebra.org/classic/gb6rdkvq">elliptic tools</url>. Custom tools for constructions in <m>(\mathbb{P}^2,{\cal S})</m>, used in Lab 5.
+          </li>
+        </ul>
+      </p>
+    </assemblage>
+
+
+<assemblage><title>Models of some surfaces</title>
+      <p>
+        <ul>
+          <li>
+            <url href="https://www.geogebra.org/m/vhb7evkh">Klein Bottle</url>. This non-orientable surface admits Euclidean geometry.  It can be represented by a rectangle in <m>\mathbb{C}</m> with corner angles <m>90^\circ</m> and edge identification boundary label <m>aba^{-1}b</m>.
+          </li>
+          <li>
+            <url href="https://www.geogebra.org/m/r2mnwqmc"><m>C_3</m></url>. This non-orientable surface admits hyperbolic geometry.  It can be represented by a regular hexagon in <m>\mathbb{D}</m> with corner angles <m>60^\circ</m>, and edge identification boundary label <m>aabbcc</m>.
+          </li>
+        </ul>
+      Can you use these models to construct the Dirichlet domain at a point in the fundamental domain?
+      </p>
+    </assemblage>
+</introduction>
+<subsection xml:id="ggb-symm"><title>Activity: Constructing Symmetric Points</title>
+  <introduction>
+      <p>
+        At <url href="https://www.geogebra.org">geogebra.org</url> look for the list of apps under the heading <em>Powerful Math Apps</em>.  For this we want to use the app <url href="https://www.geogebra.org/geometry">geometry</url>.
+      </p>
+      <p>
+        When you open the Geometry app, you should see a blank canvas on the right and a palette of tools on the left.  We will want more than the basic tools, so click on <em>MORE</em> to see them all.  
+      </p>
+      <p>
+        To familiarize yourself with this app, work through the following constructions.
+      </p>
+  </introduction>
+      <exercise>
+        <statement>
+          <p>
+            Construct a circle.  Label the center of the circle <m>Z_0</m>. Label the circle itself as <m>c</m>.  One quirk with <em>Geogebra</em> is that points must be labelled by capital letters (though you can display <q>captions</q> instead of labels), and lines and circles must be labelled by lower case letters.
+          </p>
+          <p>
+            To change an object's label, click the <em>Move</em> tool and select the object.  A window should appear with a text box.  Click that to change the label.  To get <m>Z_0</m> type <em>Z_0</em>. 
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise><title>Construct <m>z^*</m> if <m>z</m> is inside the circle</title>
+        <statement>
+          <p>
+            In this exercise we construct the point symmetric to <m>Z</m> with respect to the circle <m>c</m> where <m>Z</m> is inside the circle.
+            <ol label="a.">
+              <li>
+                Construct a point inside the circle, and label it <m>Z</m>.  Then construct the ray <m>\overrightarrow{Z_0Z}</m>.
+              </li>
+              <li>
+                Construct the line perpendicular to ray <m>\overrightarrow{Z_0Z}</m> at the point <m>Z</m>.  Call this line <m>m</m> (lines get lower case letters).
+              </li>
+              <li>
+                With the point tool selected, define one of the points at which <m>m</m> intersects the circle and label this point <m>T</m>.
+              </li>
+              <li>
+                Construct segment <m>Z_0T</m> and then construct the line perpendicular to this segment at <m>T</m>.  Call this line <m>n</m>.
+              </li>
+              <li>
+                Define the point at which line <m>n</m> intersects ray <m>\overrightarrow{Z_0Z}</m>.  This is the point symmetric to <m>Z</m> with respect to circle <m>c</m>.  Label this point <m>Z_s</m>.
+              </li>
+            </ol>
+            </p> 
+        </statement>
+      </exercise>
+      <exercise><title>Hide intermediate constructions</title>  
+        <statement>
+          <p>
+            Select the Show/Hide Object tool and click on these intermediate constructions: ray <m>\overrightarrow{Z_0Z}</m>, lines <m>m</m> and <m>n</m>, the point <m>T</m>, and segment <m>Z_0T</m>.  Now click on the Move tool (or another tool).  Those objects (and hopefully nothing else) will disappear.  To get them to reappear, click on the Show/Hide Object tool again.  The objects marked for hiding will appear faiter than the other objects.  Note:  If you simply delete these objects all other objects depending on them (like <m>Z_s</m>) will vanish too and we don’t want that!!
+          </p>
+        </statement>
+      </exercise>
+      <p>
+        Congratulations!!  You constructed the point symmetric to <m>Z</m> with respect to <m>c</m>.  Now click on the Move tool and drag the point <m>Z</m> around inside the circle.  Admire how <m>Z^*</m> follows dutifully around and is always the point symmetric to <m>Z</m>.  Notice how <m>Z</m> and <m>Z_s</m> get closer together as you near the circle, and how <m>Z_s</m> rushes excitedly toward infinity, like a dog wanting to please its master, as <m>Z</m> marches toward <m>Z_0</m>.  What happens if <m>Z</m> moves outside the circle?  Can you construct <m>Z_s</m> if <m>Z</m> is outside <m>c</m>?
+      </p>
+
+      <exercise><title>Construct <m>z^*</m> if <m>z</m> is outside the circle</title>
+        <statement>
+          <p>
+            Move <m>Z</m> outside the circle and complete these steps.
+          <ol label="a.">
+              <li> 
+                Construct the circle having diameter <m>Z_0Z</m>.  Plot a point  at which this circle intersects <m>c</m> and label this point  <m>T</m>.
+                <hint> Begin by finding the midpoint of segment <m>Z_0Z</m>.</hint>
+              </li>
+              <li>
+                Construct the perpendicular to <m>Z_0Z</m> through <m>T</m>. 
+              </li>
+              <li>
+                Let <m>Z_s</m> be the intersection of this perpendicular with segment <m>Z_0Z</m>.
+              </li>
+              <li> 
+                Hide intermediate constructions so that only <m>Z</m> and <m>Z_s</m> remain.  If you move <m>Z</m> back inside the circle, the <q>other</q> <m>Z_s</m> should still reappear.  Check to make sure.
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+      <exercise><title>The symmetry point tool</title>
+      	<statement>
+      		<p>
+      			Now that you know how to construct symmetric points whether <m>Z</m> is inside or outside a circle, I would like to point out that Geogebra has a ready-made tool for finding symmetry points, the reflect across a circle tool.  We will use this tool to speed up future constructions that involve symmetry points, especially constructions in the hyperbolic plane of Chapter 5.
+      		</p>
+      	</statement>
+      </exercise>
+    </subsection>
+<!--
+<subsection><title>Activity: Constructing Type I and Type II clines of <m>p</m> and <m>q</m></title>
+
+       <p>
+        At <url href="https://www.geogebra.org">geogebra.org</url> open the app <url href="https://www.geogebra.org/geometry">geometry</url>.
+      </p>
+      <exercise><title>The Type I cline of <m>p</m> and <m>q</m> through <m>z</m></title>
+        <statement>
+          <ol label="a.">
+            <li>
+              Plot three points labelled <m>P</m>, <m>Q</m>, and <m>Z</m> on your canvas.
+            </li>
+            <li>
+              With the perpendicular bisector tool construct the perpendicular bisector between <m>P</m> and <m>Q</m>, and the perpendicular bisector between <m>P</m> and <m>Z</m>. 
+            </li>
+            <li>
+              Construct the point at which these perpendicular bisectors intersect, label this point <m>O</m>.
+            </li>
+            <li>
+              Construct the circle centered at <m>O</m> through <m>Z</m>.  This is the type I cline of <m>P</m> and <m>Q</m> through <m>Z</m>.
+            </li>
+            <li>
+              Hide intermediate constructions so that all we see on the canvas are the three points <m>P</m>, <m>Q</m>, and <m>Z</m>, and the type I cline of <m>P</m> and <m>Q</m> through <m>Z</m>.  Drag <m>Z</m> around to check the dynamic nature of your construction.  
+            </li>
+          </ol>
+          <p>
+            Two comments: First, this construction assumes <m>Z</m> is not on the line through <m>P</m> and <m>Q</m>.  (If <m>Z</m> is on this line, then the type I cline of <m>P</m> and <m>Q</m> through <m>Z</m> is this line.)  Second, <em>Geogebra</em> has a tool for constructing this cline, the tool <q>circle through 3 points</q>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="wk-typeIIcline" >><title>The Type II cline of <m>p</m> and <m>q</m> through <m>z</m></title>
+        <statement>
+          <ol label="a.">
+            <li>
+              Given the three points <m>P</m>, <m>Q</m>, and <m>Z</m> from the previous exercise, show again the point <m>O</m>, which is the center of the type I cline of <m>P</m> and <m>Q</m> through <m>Z</m>.
+            </li>
+            <li>
+              Construct segment <m>OZ</m>, and construct line <m>PQ</m>.
+            </li>
+            <li>
+              Construct the line perpendicular to segment <m>OZ</m> at the point <m>Z</m>. Call this line <m>m</m>.
+            </li>
+            <li>
+              Determine the point <m>C</m> at which line <m>m</m> intersects line <m>PQ</m>.
+            </li>
+            <li>
+              Construct the circle centered at <m>C</m> through <m>Z</m>.  This is the type II cline of <m>P</m> and <m>Q</m> through <m>Z</m>.
+            </li>
+            <li>
+              Hide intermediate constructions, so that you just see on the canvas the three points <m>P</m>, <m>Q</m>, and <m>Z</m>, the type I cline of <m>P</m> and <m>Q</m> through <m>Z</m>, and the type II cline of <m>P</m> and <m>Q</m> through <m>Z</m>.
+            </li>
+          </ol>
+          <p>
+            Two comments: First, the construction of the type II cline also assumes <m>Z</m> is not on the line through <m>P</m> and <m>Q</m>.  Second, <em>Geogebra</em> does not have a built-in tool for constructing type II clines, but we can create a custom tool that achieves this.  More on this below.
+          </p>
+        </statement>
+      </exercise>     
+    </worksheet>
+    <p>
+      Remark: The file you open in the next worksheet has this type II cline construction saved as a custom tool.  You can create your own custom tools in <em>Geogebra Classic</em> (but not other Geogebra Apps, as far as I know). A custom tool is super useful if you expect to repeat a particular construction often in a <em>Geogebra</em> project.  Very roughly to create a custom tool based on a construction you've done in <em>Geogebra Classic</em>, begin by selecting the <em>tools</em> option from the main drop-down menu, (the three bars icon in the upper right portion of the <em>Geogebra</em> window).  Then select the <q>Create New Tool</q> option to get started.
+    </p>
+<worksheet><title>Geogebra Lab 3: Constructing figures in <m>(\mathbb{D},{\cal H})</m></title>
+        <p>
+          Open the file <em>hyp_plane.ggb</em> which can be accessed here: <url href="https://www.geogebra.org/classic/yuxwfyp8">hyperbolic plane</url>.
+        </p>
+      <exercise><title>The hyperbolic line through <m>p</m> and <m>q</m></title>
+        <statement>
+          <ol label="a.">
+            <li>
+              Plot two points in <m>\mathbb{D}</m>, and label them <m>P</m> and <m>Q</m>.  Then use the <c>reflect about circle</c> tool to plot <m>P^\prime</m>, the point symmetric to <m>P</m> with respect to the unit circle.
+            </li>
+            <li>
+              Construct the circle through <m>P</m>, <m>Q</m>, and <m>P^\prime</m>, call this circle <m>c</m>.  The hyperbolic line through <m>P</m> and <m>Q</m> is the portion of this circle inside <m>\mathbb{D}</m>.
+            </li>
+            <li>
+              Plot the two ideal points of the hyperbolic line through <m>P</m> and <m>Q</m>, and label these points <m>U</m> and <m>V</m>. 
+            </li>
+            <li>
+              Construct the hyperbolic line through <m>P</m> and <m>Q</m>, and then hide all intermediate constructions, so that we just see <m>P</m>, <m>Q</m>, the hyperbolic line through them, and the ideal points <m>U</m> and <m>V</m>.  Drag <m>P</m> and <m>Q</m> around to make sure your construction works dynamically.           
+            </li>
+          </ol>
+        </statement>
+      </exercise>
+      <exercise><title>The hyperbolic line connecting ideal points <m>u</m> and <m>v</m></title>
+        <statement>
+          <p>
+            Plot two ideal points, <m>u</m> and <m>v</m>, and determine a way to construct the hyperbolic line joining them.
+          </p>
+        </statement>
+      </exercise>
+      <exercise><title>The hyperbolic circle centered at <m>P</m> through <m>Q</m></title>
+        <statement>
+          <ol label="a.">
+            <li>
+              Given the two points <m>P</m> and <m>Q</m> in <m>\mathbb{D}</m>, show again <m>P^\prime</m>, the point symmetric to <m>P</m> with respect to the unit circle.
+            </li>
+            <li>
+              Construct the type II cline of <m>P</m> and <m>P^\prime</m> that goes through <m>Q</m> by using the custom tool <c>typeIIcline</c> included in the file you opened (look for the wrench).  (See <xref ref="wk-typeIIcline" /> for this construction.)  
+              This is the hyperbolic circle centered at <m>P</m> through <m>Q</m>.  You are welcome!
+            </li>
+            <li>
+              Move <m>P</m> and <m>Q</m> around to get a feel for how hyperbolic circles look in our disk model, and to make sure your construction works dynamically.
+            </li>
+            Position <m>P</m> and <m>Q</m> to maximize the coolness quotient of your hyperbolic circle.
+          </ol>
+        </statement>
+      </exercise>
+      <exercise><title>Construct the perpendicular bisector to segment <m>PQ</m></title>
+      <statement>
+        <ol label="a.">
+            <li>
+              Use the <c>typeIIcline</c> tool to construct the hyperbolic circle centered at <m>P</m> through <m>Q</m>.
+            </li>
+            <li>
+              Construct the hyperbolic circle centered at <m>Q</m> through <m>P</m>.
+            </li>
+            <li>
+              Construct the hyperbolic line through the two points at which these circles intersect.  This line is the perpendicular bisector of segment <m>PQ</m>.  The construction is identical to the one used in Euclidean geometry.
+            </li>
+          </ol>
+      </statement>
+    </exercise>
+    <exercise><title>There need not exist a hyperbolic circle through three points in <m>(\mathbb{D},{\cal H})</m></title>
+    <statement>
+      <ol label="a.">
+        <li>
+          Hide all constructions execpt <m>P</m>, <m>Q</m>, and the perpendicular bisector of <m>PQ</m>.  Then plot a new point, label it <m>T</m>.
+        </li>
+        <li>
+          Construct perpendicular bisectors <m>PT</m> and <m>QT</m>, hiding all intermediate constructions afterwards, so we just see the three points and the three perpendicular bisectors.
+        </li>
+        <li>
+          Find positions for <m>P</m>, <m>Q</m>, and <m>T</m> inside <m>\mathbb{D}</m> in which these three perpendicular bisectors do not intersect.
+        </li>
+        <li>
+          For points in such positions, convince yourself that no hyperbolic circle will go through these three points.
+        </li>
+      </ol>
+    </statement>
+  </exercise>  
+  <exercise><title>BONUS: create a custom tool for building the hyperbolic segment joining two points</title> 
+  <statement>
+  </statement>
+</exercise>
+<exercise><title>Submit your work</title>
+<statement><p>Save your work in a file entitled <em>yourname_Lab3.ggb</em> and submit to your homework folder.</p>
+</statement>
+</exercise>
+    </worksheet>
+<worksheet><title>Geogebra Lab 4: Measurement in <m>(\mathbb{D},{\cal H})</m></title>
+        <p>
+          Begin by opening the Geogebra file with the custom tools for constructions in the disk model <m>(\mathbb{D},{\cal H})</m>: <url href="https://www.geogebra.org/classic/bbuxpqrv">hyperbolic tools</url>.
+        </p>
+      <exercise><title>Quick calculations using custom tools</title>
+        <statement>
+          <p>Record your solutions to these quick calculations in the upper left portion of your canvas using the ABC text tool (grouped with the slider tool - two to the left of the custom tools), as will be demonstrated. </p>
+          <ol label="a.">
+            <li>
+              Construct the hyperbolic segment <m>AB</m> where <m>A = .2 + .3i</m> and <m>B = .4-.5i</m>, then determine <m>d_H(A,B)</m>.
+            </li>
+            <li>
+              Construct the hyperbolic triangle <m>\Delta ABC</m> where <m>A, B</m> are as above, and <m>C = -.3 + .3i</m>. 
+            </li>
+            <li>
+              Determine the angle at each point in this triangle, and then compute the area of this triangle.  Be sure you convert your angles to radians before you use our triangle area formula.  Do this calculation in <em>Geogebra.</em>
+            </li>
+            <li>
+              Construct the hyperbolic circle centered at <m>D = -.5i</m> through <m>E = -.2-.5i</m>.  If <m>F</m> is any point on this circle, what is <m>d_H(D,F)</m>?
+            </li>
+          </ol>
+          <p>Once you have answered these questions and recorded them at left, you may hide the  constructions you made to solve them (or delete if your written answers do not depend on them). </p>
+        </statement>
+      </exercise>
+      <exercise><title>Angle of Parallelism</title>
+      <statement>
+      <p>
+        Suppose Bormit is at point <m>Z</m> in the hyperbolic plane, and he sees a road up ahead, which is a hyperbolic line <m>l</m>.
+      </p>    
+        <ol label="a.">
+          <li>
+            Model this scenario.  That is, construct an arbitrary hyperbolic line <m>L</m> in the hyperbolic plane and plot a point <m>Z</m> not on <m>l</m>.
+          </li>
+          <li>
+            Construct the hyperbolic line through <m>Z</m> that is orthogonal to <m>l</m>.  We don't have a tool that does this directly, but you can construct it by first reflecting <m>Z</m> across two well-chosen clines.  Let <m>W</m> be the point at which the two lines intersect.  
+          </li>
+          <li>
+            The length of hyperbolic segment <m>ZW</m> represents the perpendicular distance of <m>Z</m> to <m>l</m> - it is the shortest distance Bormit can walk to reach the road.  Compute this distance, and call it <m>d</m>.  
+          </li>
+          <li>
+            Suppose <m>U</m> is an ideal point of hyperbolic line <m>l</m>.  The angle <m>\alpha = \angle ZWU</m> is called the angle of parallelism of point <m>Z</m> to line <m>l</m>.  Determine the angle <m>\alpha</m>.
+          </li>
+          <li>
+            It turns out that in hyperbolic geometry, knowing <m>\alpha</m> fixes <m>d</m>.  That is, Bormit can determine his distance to line <m>L</m> by measuring the angle of parallelism.  In an input cell at left, enter <m>-ln(tan(\alpha/2))</m>, assuming your angle of parallelism has label <m>\alpha</m>.  Check that this value matches the hyperbolic distance from <m>Z</m> to <m>W</m>.  We can prove that in general, <me>\tan(\alpha/2)= e^{-d}</me> (we will do this later, not now).
+          </li>
+          <li>
+            Download your workbook as a .ggb file entitled parallelism_yourname.ggb and add it to your homework folder.
+          </li>
+          </ol>
+      </statement>
+    </exercise>
+    <exercise><title>Hyperbolic Right Triangles</title>
+        <statement>
+          <ol label="a.">
+            <li>
+              Open a new copy of <url href="https://www.geogebra.org/classic/bbuxpqrv">hyperbolic tools</url>
+            </li>
+            <li>
+              Construct a right triangle in the hyperbolic plane, avoiding the origin (use the custom tools!).  Build the triangle in such a way that it stays a right triangle if the points are moved around.
+            </li>
+            <li>
+              Determine the lengths of the three sides of this triangle.  Let <m>a</m> and <m>b</m> denote the leg lengths, and <m>c</m> denote the hypotenuse length.
+            </li>
+            <li>
+              Does <m>a^2 + b^2 = c^2</m>?  If not, which is bigger, <m>a^2 + b^2</m> or <m>c^2</m>? Is this always the case as the triangle moves around?
+            </li>
+            <li>
+              One way to tackle the previous question would be to input <m>a^2 + b^2 - c^2</m> into a cell to see whether we get a positive, negative, or 0 value (and then move points around to see if this changes).  In a new input cell, type <m>\cosh(a)\cdot \cosh(b)-\cosh(c)</m>.  What value does this take as you move the triangle around?
+            </li>
+            <li>
+              Yes, we can prove that in a hyperbolic right triangle with side lengths <m>a, b</m> and hypotenuse <m>c</m>, <m>\cosh(a)\cosh(b)=\cosh(c)</m>.
+            </li>
+          </ol>
+        </statement>
+      </exercise>
+    <exercise><title>BONUS: Construct the hyperbolic circle centered at <m>p</m> with radius <m>r</m></title>
+    <statement>
+      <ol label="a.">
+        <li>
+          Plot a point <m>p</m> in the hyperbolic plane, and set <m>r=4</m> in an input cell (which should create a slider for <m>r</m> - we can <m>0 \leq r \leq 5</m>, say.)
+        </li>
+        <li>
+          Can you determine the value of the scalar <m>k</m> so that <m>d_H(kp,p)=r</m>?  Your answer should be of the formula for <m>k</m> that depends on <m>r</m>.
+        </li>
+        <li>
+          If you work that out algebraically, then one can compute <m>k</m> in Geogebra using your formula, then plot the scalar <m>kp</m>, and then plot the hyperbolic circle centered at <m>p</m> with radius <m>r</m>.
+        </li>
+      </ol>
+    </statement>
+  </exercise>    
+    </worksheet>
+
+<worksheet>
+  <title>
+    Geogebra Lab 5: Elliptic Geometry
+  </title>
+  <p>
+    Compass and ruler constructions in the elliptic geometry <m>(\mathbb{P}^2,{\cal S})</m> are done in much the same way as they were done in the disk model <m>(\mathbb{D},{\cal H})</m> where the antipodal point <m>z_a</m> of a point <m>z</m> plays the role in elliptic constructions that the symmetric point <m>z^*</m> played in hyperbolic constructions.
+  </p>
+  <p>
+    Begin this worksheet by opening a classic geogebra file with custom tools for constructions in  <m>(\mathbb{P}^2,{\cal S})</m>: <url href="https://www.geogebra.org/classic/gb6rdkvq">elliptic tools</url>.  The disk you see is the closed unit disk.  Recall, the space in elliptic geometry, <m>\mathbb{P}^2</m>, consists of all points in the closed unit disk with the additional feature that antipodal points on the boundary have been identified.
+  </p>
+  <exercise>
+    <statement>
+      <p>
+        Plot a point <m>P</m> in the closed unit disk.  Use the custom <c>antipodal point</c> tool to construct the point <m>P_a</m> antipodal to <m>P</m>.  Move <m>P</m> around in the disk to admire how <m>P_a</m> obediently follows along outside the unit disk.  Notice that as <m>P</m> approaches the unit circle, <m>P_a</m> also approaches the unit circle at the point diametrically opposed to <m>P</m>.
+      </p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Plot a second point <m>Q</m> and use the <c>elliptic line</c> tool to build the elliptic line through <m>P</m> and <m>Q</m>  Label this line <m>m</m>.  [This elliptic line is the portion of the cline inside the unit disk that goes through <m>P</m>, <m>P_a</m> and <m>Q</m>.]  Drag <m>P</m> or <m>Q</m> around to see how <m>m</m> changes its look. Notice that <m>m</m> hits the unit circle at antipodal points and <m>m</m> looks Euclidean if and only if the line passes through the origin.  [For a cool effect, rotate <m>p</m> around <m>q</m> and watch the line <m>m</m> change.  Add sound effects as desired.]
+      </p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Hide the elliptic line through <m>P</m> and <m>Q</m> (but not the points).
+      </p>
+    </statement>
+  </exercise>
+  <exercise> 
+    <statement>
+      <p>
+        Plot a third point <m>R</m> inside the unit disk.  Use the <c>elliptic segment</c> tool to construct the elliptic triangle <m>\Delta PQR</m>.  Drag the corners around.  Admit that the triangles look like triangles on a sphere.  C'mon, admit it!  Move the triangle to a pleasing place and then hide <m>R</m> together with the three sides of the triangle.  Once hidden, only points <m>P</m> and <m>Q</m> should remain visible.
+      </p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p> 
+        Plot two new points <m>U</m> and <m>V</m> in the unit disk.  Construct the elliptic segment between them.  Then use the <c>elliptic circle</c> tool to construct the perpendicular bisector of segment <m>UV</m>.  After you have done this, hide all of the constructs used to find the bisector as well as the bisector, points <m>U</m> and <m>V</m>, and segment <m>UV</m>.
+      </p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Show the elliptic line <m>m</m> again.  Plot a point <m>Z</m> that is not on <m>m</m>.  Construct an elliptic line through <m>Z</m> that is perpendicular to <m>m</m>.  Is this line unique?  Hide <m>Z</m> and this perpendicular line. 
+      </p>
+    </statement>
+  </exercise>
+  <exercise>
+    <statement>
+      <p> 
+        Focus on line <m>m</m> again.  If necessary, move <m>P</m> and <m>Q</m> around so that <m>m</m> is not a Euclidean line.  There is a single point in the unit disk that is equidistant from every single point on <m>m</m>.  Construct this point and give it the caption <q>home base</q>.  Save your file as <em>your name_elliptic.ggb</em> and add it your homework folder.
+      </p>
+    </statement>
+  </exercise>
+</worksheet>
+
+-->
+
+</section>
+
+
+
+
+</chapter>

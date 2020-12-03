@@ -7,7 +7,7 @@
       Many online tools will evaluate complex expressions for us.  Our tool of choice will be Sage.  In this section we provide several examples of Sage cells aimed at speeding up the calculations we do to understand the geometries we study in GCT.
     </p>
   </introduction>
-  <section xml:id="section-sage">
+  <section xml:id="sage-intro">
     <title>Using Sage</title>
     <p>
       Sage cells allow us to evaluate expressions within the webpage we are reading, as long as we are online, and Sage cells can be found throughout this booklet.  You can return here as often as you like to access Sage cells in order to help with your geometry work.
@@ -73,7 +73,7 @@
     </sage>
         </paragraphs>
   </section>
-  <section><title>Sage for GCT</title>
+  <section xml:id="sage-GCT"><title>Sage for GCT</title>
   <p>In this section, Sage cells have been provided that help us do the following:
     <ol>
       <li>Convert between polar and Cartesian form (GCT Section 2.2)</li>

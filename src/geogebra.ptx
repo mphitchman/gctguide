@@ -7,7 +7,7 @@
       <em>Geogebra</em> offers dynamic compass and ruler constructions online.  We use this program often in our investigations.  Indeed much of the key developments in the text rely on compass and ruler constructions, and to understand them we need to get in and work with them.
     </p>
   </introduction>
-  <section><title>Introduction</title>
+  <section xml:id="ggb-intro"><title>Introduction</title>
       <p>
       You can access <em>Geogebra</em> apps in a few ways. Click on the <c>Calc</c> button near the top of this page to open a <em>Geogebra</em> window on the right of this screen.  This can be handy from time to time.  You can also open the <em>Geogebra</em> apps at their website <url href="https://www.geogebra.org">geogebra.org</url>.    
     </p>
@@ -18,9 +18,9 @@
         <interactive width="100%" height="100%" geogebra="fnpyf732" />
     </p>
 </section>
-<section><title>Geogebra Activities</title>
+<section xml:id="ggb-activites"><title>Geogebra Activities</title>
 
-<assemblage><title><em>Classic Geogebra</em> files with custom tools used in these activities</title>
+<assemblage><title><em>Classic Geogebra</em> files with custom tools</title>
       <p> 
         <ul>
           <li>
@@ -30,6 +30,21 @@
             <url href="https://www.geogebra.org/classic/gb6rdkvq">elliptic tools</url>. Custom tools for constructions in <m>(\mathbb{P}^2,{\cal S})</m>, used in Lab 5.
           </li>
         </ul>
+      </p>
+    </assemblage>
+
+
+<assemblage><title>Models of some surfaces</title>
+      <p>
+        <ul>
+          <li>
+            <url href="https://www.geogebra.org/m/vhb7evkh">Klein Bottle</url>. This non-orientable surface admits Euclidean geometry.  It can be represented by a rectangle in <m>\mathbb{C}</m> with corner angles <m>90^\circ</m> and edge identification boundary label <m>aba^{-1}b</m>.
+          </li>
+          <li>
+            <url href="https://www.geogebra.org/m/r2mnwqmc"><m>C_3</m></url>. This non-orientable surface admits hyperbolic geometry.  It can be represented by a regular hexagon in <m>\mathbb{D}</m> with corner angles <m>60^\circ</m>, and edge identification boundary label <m>aabbcc</m>.
+          </li>
+        </ul>
+      Can you use these models to construct the Dirichlet domain at a point in the fundamental domain?
       </p>
     </assemblage>
 
@@ -421,6 +436,7 @@
     </statement>
   </exercise>
 </worksheet>
+
 
 
 </section>
